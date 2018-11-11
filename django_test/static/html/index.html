@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>django-test-index</title>
+</head>
+<body>
+	{% load current_time %}
+	{% ctime "%Y-%m-%d %I:%M %p" as the_time %}
+
+	<h3>Current_time:{{the_time}}</h3>
+	
+	<ul>
+		<li>图解http</li>
+		<li>人月神话</li>
+		<li>代码大全2</li>
+	</ul>
+	
+	<br />
+	
+	{% task_list %}
+	
+	<br />
+	{% upper %}
+	这是我自定义的标签，将小写转换为大写（test）
+	{% endupper %}
+
+</body>
+</html>

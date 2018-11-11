@@ -1,0 +1,16 @@
+{
+    "hdi_machine" : {
+        "host" : "47.97.1.237",
+        "port" : 22,
+        "username" : "cingta",
+        "password" : "KDHundsun#1",
+        "dirname" : "/mnt/cingtahdi", #最后的斜杠不要添加
+    },
+    "ct_web_machine" : {
+        "host" : "118.31.165.166",
+        "port" : 22,
+        "username" : "cingta",
+        "password" : "kingdee#119",
+        "dirname" : "/mnt/cingta", #最后的斜杠不要添加
+    }
+}

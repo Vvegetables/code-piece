@@ -1,0 +1,25 @@
+#coding=utf-8
+'''
+python -m doctest -v add_function_other_doctest.txt
+python -m doctest add_function.py
+'''
+
+#这个例子展示如何将doctest用例放到一个独立的文件中。
+#'>>>' 开头的行就是doctest测试用例。
+#不带 '>>>' 的行就是测试用例的输出。
+#如果实际运行的结果与期望的结果不一致，就标记为测试失败。 
+
+>>> import sys
+>>> import os
+>>> self_dirname = os.path.dirname(os.path.abspath(__name__))
+>>> sys.path.append(self_dirname)
+
+'''
+上述操作是将自定义模块可以在控制台导入使用。
+
+'''
+>>> from add_function import my_function
+>>> my_function(3, 4)
+7
+>>> my_function('a', '3')
+'a3'

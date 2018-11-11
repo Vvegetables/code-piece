@@ -1,0 +1,1 @@
+{"err_file": "/mnt/cingta/new_cingtaweb/cingta/static/img", "datetime": "18-08-22 18:06:04"}
