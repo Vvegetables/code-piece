@@ -26,7 +26,23 @@ def main():
     print(threading.enumerate())
     #返回主线程
     print(threading.main_thread())
+
+#继承类方法写线程
+class MyThread(threading.Thread):
+    def __init__(self, arg):
+        super(MyThread,self).__init__()
+        self.arg = arg
     
+    def run(self):
+        time.sleep(1)
+        print("the arg is:%s\r" % self.arg)
+        
+def class_thread_test():
+    for i in range(4):
+        t = MyThread(i)
+        t.start()
+
 if __name__ == "__main__":
-    main()
+    #main()
+    class_thread_test()
 
