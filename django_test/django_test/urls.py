@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+import celery_task
 
 
 urlpatterns = [
+    
+    url(r'^chat/', include('websocket_chat_test.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r"^template/",include("self_template_define.urls"))
+    url(r"^template/",include("self_template_define.urls",namespace="self_template_define")),
+    url(r"^app/",include("self_application.urls",namespace="self_application")),
+    url(r"^do/$",celery_task.views.do),
 ]

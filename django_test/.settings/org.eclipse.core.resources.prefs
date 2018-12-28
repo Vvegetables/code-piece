@@ -1,4 +1,9 @@
 eclipse.preferences.version=1
+encoding//celery_task/task.py=utf-8
+encoding//celery_task/views.py=utf-8
+encoding//django_test/celeryconfig.py=utf-8
+encoding//django_test/routing.py=utf-8
+encoding//self_application/urls.py=utf-8
 encoding//self_template_define/templatetags/current_time.py=utf-8
 encoding//self_template_define/urls.py=utf-8
 encoding//zcxu_middleware/__init__.py=utf-8

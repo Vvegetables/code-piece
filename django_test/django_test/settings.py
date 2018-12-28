@@ -25,12 +25,13 @@ SECRET_KEY = 'a0l6pmnppvv3x@!v09i&g!lh!d7khqxls*xlh+z2p7==ch^)_n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','192.168.2.154']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'self_template_define',
+    'self_application',
+    'users',
+    'websocket_chat_test',
+    'djcelery',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'django_test.urls'
@@ -73,7 +79,17 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_test.wsgi.application'
+ASGI_APPLICATION = "django_test.routing.application"
 
+#channels router and backend config
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -126,8 +142,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # 
 # USE_TZ = True
 
-
-
 LANGUAGE_CODE = 'zh-hans'
 TIME_ZONE = 'Asia/Shanghai'
 USE_I18N = True
@@ -135,13 +149,29 @@ USE_L10N = True
 USE_TZ = False
 
 
-
-
-
-
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_URL = "/app/login/"
+AUTH_USER_MODEL = 'users.User'
+
+
+# Celery
+from .celeryconfig import *
+BROKER_BACKEND = 'redis'
+BROKER_URL = 'redis://localhost:6379/1'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/2'
+
+
+
+
+
+
+
+
+
+
+
+
+
