@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+<link rel="shortcut icon" type="image/x-icon" href="//res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico">
+<link rel="mask-icon" href="//res.wx.qq.com/a/wx_fed/assets/res/MjliNWVm.svg" color="#4C4C4C">
+<link rel="apple-touch-icon-precomposed" href="//res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+
+
+        <script nonce="1799824546" type="text/javascript">
+            window.logs = {
+                pagetime: {}
+            };
+            window.logs.pagetime['html_begin'] = (+new Date());
+        </script>
+        <title>
+ TensorFlow领衔，七大深度学习框架大对比！
+</title>
+        
+<style>.radius_avatar{display:inline-block;background-color:#fff;padding:3px;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;overflow:hidden;vertical-align:middle}.radius_avatar img{display:block;width:100%;height:100%;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;background-color:#eee}.rich_media_inner{word-wrap:break-word;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto}.rich_media_area_primary{padding:20px 16px 12px;background-color:#fafafa}.rich_media_area_primary.voice{padding-top:66px}.rich_media_area_primary .weui-loadmore_line .weui-loadmore__tips{color:rgba(0,0,0,0.3);background-color:#fafafa}.rich_media_area_extra{padding:0 16px 24px}.rich_media_extra{padding-top:30px}.mpda_bottom_container .rich_media_extra{padding-top:24px}.mpda_bottom_container .rich_media_extra .mpad_more_list{right:-10px}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;line-height:1.6}body{-webkit-touch-callout:none;font-family:-apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif;color:#333;background-color:#f2f2f2;letter-spacing:.034em}h1,h2,h3,h4,h5,h6{font-weight:400;font-size:16px}*{margin:0;padding:0}a{color:#576b95;text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}.rich_media_title{font-size:22px;line-height:1.4;margin-bottom:14px}@supports(-webkit-overflow-scrolling:touch){.rich_media_title{font-weight:700}}.rich_media_meta_list{margin-bottom:22px;line-height:20px;font-size:0;word-wrap:break-word;word-break:break-all}.rich_media_meta_list em{font-style:normal}.rich_media_meta{display:inline-block;vertical-align:middle;margin:0 10px 10px 0;font-size:15px;-webkit-tap-highlight-color:rgba(0,0,0,0)}.rich_media_meta.icon_appmsg_tag{margin-right:4px}.rich_media_meta.meta_tag_text{margin-right:0}.rich_media_meta_primary{display:block;margin-bottom:10px;font-size:15px}.meta_original_tag{padding:0 .5em;font-size:12px;line-height:1.4;background-color:#f2f2f2;color:#888}.meta_enterprise_tag img{width:30px;height:30px!important;display:block;position:relative;margin-top:-3px;border:0}.rich_media_meta_link{color:#576b95}.rich_media_meta_text{color:rgba(0,0,0,0.3)}.rich_media_meta_text.rich_media_meta_split{padding-left:10px}.rich_media_meta_text.rich_media_meta_split:before{position:absolute;top:50%;left:0;margin-top:-6px;content:' ';display:block;border-left:1px solid #888;width:200%;height:130%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-transform:scale(0.5);transform:scale(0.5);-webkit-transform-origin:0 0;transform-origin:0 0}.rich_media_meta_text.article_modify_tag{position:relative}.rich_media_meta_nickname{position:relative}.rich_media_thumb_wrp{margin-bottom:6px}.rich_media_thumb_wrp .original_img_wrp{display:block}.rich_media_thumb{display:block;width:100%}.rich_media_content{overflow:hidden;color:#333;font-size:17px;word-wrap:break-word;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto;text-align:justify;position:relative;z-index:0}.rich_media_content *{max-width:100%!important;box-sizing:border-box!important;-webkit-box-sizing:border-box!important;word-wrap:break-word!important}.rich_media_content p{clear:both;min-height:1em}.rich_media_content em{font-style:italic}.rich_media_content fieldset{min-width:0}.rich_media_content .list-paddingleft-2{padding-left:2.2em}.rich_media_content .list-paddingleft-2 .list-paddingleft-2{padding-left:30px}.rich_media_content blockquote{margin:0;padding-left:10px;border-left:3px solid #dbdbdb}img{height:auto!important}@media only screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait){.rich_media_area_extra{padding-bottom:34px}}@media only screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape){.rich_media_area_primary{padding:20px 60px 15px 60px}.rich_media_area_extra{padding:0 60px 21px 60px}}@media screen and (min-width:1024px){.rich_media_area_primary_inner,.rich_media_area_extra_inner{max-width:677px;margin-left:auto;margin-right:auto}.rich_media_area_primary{padding-top:32px}}.appmsg_share_notice{font-size:16px;color:#888;position:relative;padding:1.25em 0;margin-bottom:1.75em}.appmsg_share_notice:before{content:" ";position:absolute;left:0;top:0;right:0;height:1px;border-top:1px solid #dfdfdf;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(0.5);transform:scaleY(0.5)}.appmsg_share_notice:after{content:" ";position:absolute;left:0;bottom:0;right:0;height:1px;border-bottom:1px solid #dfdfdf;-webkit-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:scaleY(0.5);transform:scaleY(0.5)}.appmsg_share_notice_hd{font-weight:700;padding-bottom:.2em}.cell{padding:.8em 0;display:block;position:relative}.cell_hd,.cell_bd,.cell_ft{display:table-cell;vertical-align:middle;word-wrap:break-word;word-break:break-all;white-space:nowrap}.cell_primary{width:2000px;white-space:normal}.flex_cell{padding:10px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.flex_cell_primary{width:100%;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;box-flex:1;flex:1}.original_tool_area{display:block;padding:.75em 1em 0;-webkit-tap-highlight-color:rgba(0,0,0,0);color:#333;border:1px solid #eaeaea;margin:20px 0}.original_tool_area .tips_global{position:relative;padding-bottom:.5em;font-size:15px}.original_tool_area .tips_global:after{content:" ";position:absolute;left:0;bottom:0;right:0;height:1px;border-bottom:1px solid #dbdbdb;-webkit-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:scaleY(0.5);transform:scaleY(0.5)}.original_tool_area .radius_avatar{width:27px;height:27px;padding:0;margin-right:.5em}.original_tool_area .radius_avatar img{height:100%!important}.original_tool_area .flex_cell_bd{width:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}.original_tool_area .flex_cell_ft{font-size:14px;color:#888;padding-left:1em;white-space:nowrap}.original_tool_area .icon_access:after{content:" ";display:inline-block;height:8px;width:8px;border-width:1px 1px 0 0;border-color:#cbcad0;border-style:solid;transform:matrix(0.71,0.71,-0.71,0.71,0,0);-ms-transform:matrix(0.71,0.71,-0.71,0.71,0,0);-webkit-transform:matrix(0.71,0.71,-0.71,0.71,0,0);position:relative;top:-2px;top:-1px}.rich_media_global_msg{position:fixed;top:0;left:0;right:0;padding:.85em 35px .85em 15px;z-index:2;background-color:#c6e0f8;color:#888;font-size:12px}.rich_media_global_msg .icon_closed{position:absolute;right:15px;top:50%;margin-top:-5px;line-height:300px;overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0);background:transparent url(//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/icon_appmsg_msg_closed_sprite.2x42f400.png) no-repeat 0 0;width:11px;height:11px;vertical-align:middle;display:inline-block;-webkit-background-size:100% auto;background-size:100% auto}.rich_media_global_msg .icon_closed:active{background-position:0 -17px}.rich_media_global_msg.voice{color:#1aad19;background-color:#e8f6e8;padding-left:43.3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rich_media_global_msg.voice .ic_voice{position:absolute;top:50%;margin-top:-10px;left:15px;display:inline-block;width:13.3px;height:18.3px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAA3CAYAAAB+fggjAAAAAXNSR0IArs4c6QAACb9JREFUaAW9WX9wVMUd3917d5cf/Agp1OTuQgIlQqUoI1JI1Noojg2I+VU7hVrtDDpadRypgzKjU52x09KOdsS20ypSO/WPWttcAqhTOlSoU4FIoRUn0wEZIMndBUkwGEhyv97bfvaS97L77t3lHYUuc+z3935397vf/e4LJZfQnuPPsW0d25ZQzr9mELKSUnIVzHxB/Dh+lBOKf4OEk0FOyQAl/CyltIt5tL29d/V2FzIkLUQ4FA7dwon+KCF0Fee8rBBdS5aSs/D+PUrYbyKtkb9b9BzAlA7CERrqDN1DOH8C8HU57FwSGat6kBGypbcluhMwFj+75XWwemf1vHQqtZ0T3pCtelkp73uJ79s9bT39dqs5HQyFK79jcPIKFErtSgLHjPvQHQB0EFt2hDE2QHU6RMvpkODrw3o50Uk5p3w2N/SlUKhHTNZjskHBz2pi6ylbH22J/k3mOToYCAceIYT/AgYVPhxJQTkMQ792Ez/yQCY8d0fgRl0nj8J2G5z1mvSJ3qCMrYOTb5l0xQFBDIUDjxmcbzUFJnu621/kf/DUmlM9k7RLh4LtwRChxquck0bFCqWjxENuijXF/iXoioNVnZU36wZ5D7PTTCWsWhyp4uFYa+x1k3Y5ezj6oNgtdTVpL0Lo+mhr9BwO0Xib+/bcWYZB35Sdg/sXsOSNV8o5MXK0LfoKYXQDxpJOMZ8L1g8E33JQT6aeQRoJCOJEMxjxfCvSEtlnEq5Uj5h7Ayv2I8U+5w9du/va0oyD896ZV004RQKebIzQ53EQ/jJJubJQhUa2YBXPmqNgy8vPjZ67N+NgMh6/HwSfyURgniwqLvmJif8/+sNrY6O4XV5WxjKMuvHDQOl9uCksHmX0xydWn0hYBJfAgncXzBhNjjZSnX8Fq3ENdmWWUMUhS2Ebv5HrtjDNg/+B5IY4wos0cVukUskqUwj9xfKS2W9GSEwi5QdxFS5BMn54dGzkHkhOy0x18j9COY1O5VxmhGJylIxMjgUTC7WUkfrqJAkQpfuP3nFUElO4WUgwHHza0HU1wG1SGOi0jeSI+kf92hgZlXg0yajBV0gUwri4vqZud/O7PbhxkGiNvM5NWHKV3NN8LGQbuVdDsYIVzOzHOI+ygzYhR/RAxwdbELcPZDEp+Q+2YQcS2L+Zwc4gdSUQS7Oz5BwIKUqWyq5ApEdDsVmhBKaHnHDQVUg1uwKLkkm+USEScsbjId/ra+7fbaMThMHVdpoTjuyxXloqcUg+Eqe4WBb26/5hGXeCkynyfdA9Fo/SQeZlN/StjUQtmgQUFxVnKhyJlAUGOgP13OC3ygxGWZhhSYtkYqIicUHGnWCUluoFz8mzkRzOCf14Wfyikx2ThvQ0B6XZdvhi1QaoAfZHmiMf40xMJmih4BvxWQnbNCD3i/cunoYab4FMQwr5o4zb4Uh9ZMxOM3Fsf91YfPQfOAeLTJrouYc8K3rEII0ikBcKRLTEhUQNuo8E7NSGh4dnyDOFzIioOpxkZdqyXYGSAV2rMYjhIUamkL2ZcANvG+MWWS4DU/parDm2R8AiBj/Bz3IQe14DPKeDRho1hNyonFplhgp/mmaNhpH6s0VVToNFxR7TPcVFJVZdgMG4cNBq0LvRQhyA2vLaMyDrFouTL169KzBlGkEofdnScQYMXBI/raiuXC1fs4wz2iXLI+U0y7gd3tewL41IVhLvmM6X2eWycM7nZ9EEAXWgWDWPpjWg7tx8+IbD4llhNTadTn8XcWgVBphprbhbLQkngJK/ymTdoE/IuDPME5jYSYx1HLn3EH6/B77Rq/m+FG2L3d7X1Pe+kx5kCBJp4G0clDWmAJTD0db+NhO398GO4G3cMDJBbPIY9bShfgyb+OXqMwGPV9rrskFsc6t4fck0GRZPQ5GnZBpO4x/wvrAmKfP+FzjjYF9zn5i58s0ET8MX8hnGc+BxOGnFi8innBg7UUBsFaV6Pt1CeBMrKD73qG8CbPnKUHvg/lzG+tr6DlGWufJkEWQp/tjgyMBJPF+fWrhj4XSZeSlwJgaFIhyioY7gHvS3moYyK6TRO6JN0b0mzd6HOgIbEBK/gp7fzsOBGMLUX2Z+bWvvnb1T3sd2fYFbDgoET8/56UTqKEBrizDIeY1463tae1BGObeq9qrlBtXb4aRcmVvCmOjneFq+UFZW9lJ3Q3fee9lSmgAUBwUNd+N9CPjfTfDHO0pO+z1FK081nfpUoUuIuKPPD322Gav5OMjWBCURRBGN4GH0QCGvxSwHhcFguPLnGEip97AKXd5y39dPN5yOy4PaYXGrjKToRsTMIzg4M+38cZz+LNYWe8qZp1Izh0QlEVLfctMmzNb6gCP4GGxFcij5W7usHT++NjaI4uHpadr0KkbpZvAH7DKw9iRi98lsejbFcQWF2LJ/LvOe6Yl14m5eLavhU8gqkQdlWj5YnOSL+sXNWNFNmKT1NQsLkGAez3zcIHmfj44rKAYUd2Jxcek6HCP1cHD+Ig5DzonZnT3WdOyCWFGukRUIwkGTL069kdYz319MmlOf00EhjKpiWKPku7IiDF9X3RHMecvIsjIsPqdh1ewO3SXLOMF5HRQKvS39h5GNOmVlnZP1Mu4W9pZ5/4TDZh0ybHkt3iKOqcm0OaWDQpB52DZTQfQo+Vtl3C08kQGO2OStYtlGz6CuHJxZO3MPYnHYMsDJVSKpW3ghAOXKsxaPoup86q4c7F7cncSyHZANGen0Shl3C+PSPy/L4qmZ97525aAwiMLgQ8Uwp8tl3C2MASff00KJMRW3GXLtIFbwY1kXp/kaGXcL42AoDqHit6p5JxuuHfQwj1IvIhFO9QhyGk/QpskM/C3Gyo0y3YRdOzgnNOcTHJS0qYgVrBIfLE28gF75ToN3bySfrmsHM68tTo7JxuKJ+PUyPhWcqbQ5XarI+TRlZxQeENcOjitS5dMc5/oqu8F8+ODI4FrEoPVpBTfL8akK2YIc9DCiFAkoyTbUdNSU5XPK5Im/MQPeZOKZnpNdCu6AFOTgrJLZO2FDrogrUjyxPbQ/VOxgWyG9Fn71h6hoJkMC8exlvl8qQg6I66rE1A22Vz6PEuwZExe92CrQtmmU72U+fzQ9K/15XV1dsuudrhlc50t0XX8Izq1TdAh5I9rWf69Mc4ILdlCU9kNDn32ICvZS0wySAY2W+shSUdw6OSXTCtpioSgePZrPeydWTUncstF8MPRw1dFvunFO2CnYQaGEk3cSn8iWYyVeBGoImqtG6RHxQsQfEJVskE+34C22GxOfb8fiY40owtaAJ0qnciTxcvSlE7VfBPX3IQ8lb/U2R3dgBRGu7tt/AYJkZEGv/oaXAAAAAElFTkSuQmCC) no-repeat center;background-size:contain}.rich_media_global_msg.voice .icon_more{position:absolute;right:15px;top:50%;margin-top:-6.5px;width:8px;height:13px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAYAAADeB1slAAAAAXNSR0IArs4c6QAAA49JREFUSA2tVk1IVFEUPveOmhQk1ibfvLFZSJtACqJIIpCIoB+imcFV2Z9ZUVnRomgRGFn2i6mFf5XVotCZMYmgIMhlq6BFENFiwjfPAosgFzXOvNu5o3fmeue98Y16F3PP+c453/fu/xCQmvZSWwwJaC0G6P8WND9IoTmbVFRycpqAdgBWkwRo94V960RsPn1aoPpN9RI6CR0WsDWcjAErtUiqTR/S18+HnNcSTv5zYrwDSatVMgLkH6aciwfj79WYW5+OT4xfsyPnBIgvwt872qBW45ZQzaMlJXCfMPJbDQgfRUoIhduVUW2TwArpaWyX+bnYU9JAAH44FaJIccqCW76Ib7NTjhOOvFPN/8q/IvE3cR+npFJgao9rkiSUXjD2GCNqzMnPbNPYjth3mqINlJAvTsk4kiJmWa3eQe8WpxwVzwjwgFFn/CorL29EkY9qovC5CFDrKq7JVoHl6zNTJCf53/lLk78SN/FcbJRx2cZCixC4ZATGXsu4as8YgQjGamN/q5atOotn4K3A1J4BUMbgsh7Wt6sx2bcV4AkjtSPJxkDjRQL0hVwg21zEglSzN+rdKeOybTtFcgK39ajWZDFWr+IZHxfGQ8mV0YA5nMGmDVcCPNcb8R5gYJ1UCWQfp6PFCI4NyZhrAV6EIiHGrPOAB0ImkW2c0la8u8ICc0wUCWrvC1dsw+3TnN6uanDaJ4zeiIfiA9wtWIAX8XspxeA6iuBlaN88hNzCNXk+JwFOuXJYW5tMQmc+EcqgzXGb2n9XFk1NstX5yKczl89JAF+6vRaBM1m5XAu//qkRGrtb8BThTtqH2/V0LmUWwbvsiREw8X0vcJHxxNbjNm3KUuVaMjmPFuWm2CPesHc/kp+yj06hFMhj/PIOOcfVFLk6xZT0G3vMTpmc27MusityZk/OBfKOwA05MPLIDJn3OJldcxTQotpBYOyEXVEWIw/NoInvuHOznSJfVDs0GzneNw9mI+eyOSPQI9phfCqPO38TFhHaFw/Eu/LliNiMESB5w6zkzD05F8mMYJr8mFC263Fa+vAadvXloj4toEcrjlgMjgrQrseHpBcfkm67WD6M6MN6lTWZeoZjyYxGLcB57MGnsEfF3fjU2G189QBpcUqmBLrnSs4504s8GjLxrwm5qYrg3dKFf6x6VbwQ3yOS/wz8+bS0ruwfELaBY2nyoNkn4gvW65GKRn4WForwP+dONHDaOHeZAAAAAElFTkSuQmCC) no-repeat center;background-size:contain}.preview_appmsg .rich_media_title{margin-top:2.3em}@media screen and (min-width:1024px){.rich_media_global_msg{position:relative;margin-bottom:32px}.preview_appmsg .rich_media_title.rich_media_title{margin-top:0}}.pages_reset{color:#333;line-height:1.6;font-size:16px;font-weight:400;font-style:normal;text-indent:0;letter-spacing:normal;text-align:left;text-decoration:none;white-space:normal}.weapp_element,.weapp_display_element,.mp-miniprogram{display:block;margin:1em 0}.share_audio_context{margin:16px 0}.weapp_text_link{font-size:17px}.weapp_text_link:before{content:'';display:inline-block;line-height:1;background-size:contain;background-repeat:no-repeat;background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAB4RJREFUWAm1WUuMFGUQnn7szL5mdvbh7GwgEQUlS1weiagxxpigiUZeJgY1cMMDcDCGG8GLCWZvxHjh4BWUeDEsejBBEzWYKBBEiHAABBfCMOwsuzvszrvb+v6Zb7amt1ce0Up6qv6q+qq+/rv778dYkUeUqamp5dFodJPv++ts205blpX2PG8I5cTOiLol44zYZ8vl8vFkMnnlUVpZDwPK5/MpIbWrVqttFlLD0jwiBEHIaNbCGKJjQvai+I9Xq9VD8Xg8y9z76QcimM1mu3t6ej4UYh84jtOFxhBNJGxskhp5xIielZ37bHp6+tNUKnWPOYvp+xKcm5t7S4gclKIpFNGzsmjRkBnUOwNbZjQrtfZ2dnZ+vVgd+O1/CVqlUukjIXZYCqZADBuEJIllc4xh61zmaB9s7LDkHkYPwJgX1KEEx8fHO2TmjkjyPgLQmERIAjHajGnyjDGPOfQ3xvvQCz3ZS+sw5hYAsodbWBhNw4SNGCMBnR/MYS60jskhPyaHe7u4W5otmEGZ8v0gx2YsyDE0bc4Wx8glOe2Dn2No2hqPnuiNXC0tM9i4IA5LcksjNm0BNs417aMNAsRom3HoMD8wsu3QF06TIJaSRCJxXrDmamUBrVEYRejDmDY0JEgsLE4f8mkTj6tb1tsRLkEukiBY56Q4rizThI2okaNtjFlUx+Cr1vzIyTMz7uW/ik4mV7Yd24oMDrR5q1Z01Nav6a5yVsLwcvRS4CI1D5ge+MEdQhbgC1yECSQhjMNsYCGMQ2dzFeuLYxOxibuVBec3cpekY7XtWwZK8a75sMajj2yzcsd5BnccM4PCeg/JoQjJwAY4TFgUMeRjXK54kS/H6uR6e1xvw4vJyuNLYh5yrt8s2d//MtV2M1Nyvvo2F9u5LVUSJEJNPPtKrS7XdXdL6GOzG+LYqIJNUiShYyRDjRw2OXnmnntnsmInE663e3u6uHZVZy2ZsH1sa4Y7ant2DBURu3aj6Jz9c9YBVuNRhz6pvwlju1gsPikzaG78CKIxNgh1sAj91MhFztXrRQf2C+vi1Y721tMC/vZYPQb78rWCE8Tr/uCEJyZbrprNAAST4QOAIGj6qBnDGPjZgmeS0gNRc1jD8D1xx+y978/XJh4awl54nHOl8Do6STKoDarxg5gmxpj2yTEwbtZhDvSlKwUzy+lU1NPxFvz8EcSzpnnYXDCD3AtqFtOFGNM+kMBYx+DzPD/y86m8e+7SnBON2v7qlR01ncP6Gg9uriSlGSSAYyTDhl/7bmTK9tXxkj3ydFetL4lTqT5jyIdgTB/0qT9m3R9/zbvT+Yottfw3XuktJxP1Q61rh/QfcuUcHBKmzcIwdCILQE/crVpHj9+JZe7U17hSyau89lJPxYDVD3KJm5qpWWMnJqMIY+nZvKGv/NQT7ebwcicI5RhYiHBLYx30WQxObWNMyQm5Q0cy7ULK6up0/PUj3dWXn48bckEMGrGZkPJ3bhssunLmLR2qXzyIacxitvT2XZm9jABWMEmD6QPJYzILILdyeWf13Y39ZTSEMAeaQpuxZUujHn26fhCPmI6Dmy0OvIE1AyyqfYWiH7n6d9GJxWz/7df7FpBjLjQETag1Me1HPKxXwJfByXeLRViUYGiI3F/NSYr1raPdNoXh594S75nVT1Z/mUz6kAfhGJp2EI887gRy5Bw0M/g7ndQI0gZISJkpyU6WbTm7m8RYELnFkh+ZnK4/qCTiWF4XXtk6X5NkLjX7iz4rh9keAxBODaKNWKrf9Qd627yC3Cm++2m6DbHWYpHI2Im7UfFZqf6oN9DrmAsPWIquH8QjR8dRG2O88JszW56kTwvRYSayOYtD37xdsT8/ejtWq/nWsqXttdXDHdW+RNTHY9Vv5/IuTgPHtfxd7w0V04/V1ziND5IiCeTofsyTw3tRnqyfNY9b8qg1JkktXwo0EKAlg23eO2/2l7/5YaoNTyPYNIFEt6xxr/aVQQ75QTxJkEBYnDFocEKOqYQHVnn+uiCBLji1IBnCBiVZ+U6fv+dmshV7cqpq9fY4/tBg1HtudXe1zeyuRs9fHMRrEvQBQT9smb1Z+YphHljr3cWJF2gB7NOENAhAjrWGP9iIPuZhDOFYa/hD8KOxWOyAweAHEnxpqnvrvyyofbQZg4boZsEcjrUO4mX2Wl6a6jdhQeAtSoJ70YDNoIMFwmJoqImF5Wgf8jHGRhx0Y9vLNzrkNQligPdRuZpHgyDEKIixMPMQow82/dC04YdgzFwdg0+2Uf1OjPzmOYhBQ6xCoYCX9626WDOo9pqNqHUO7IfBy0XxYJ8+UHdiYuJ9AHQT2GGiycHmmLNDkmFY+JCPXrlcbqcMW28/iCNpEcHnt/3SwHzhQiEIG5JAGDYsN8yHGjil5Ir9BKVDa4U5ta/xveagNDCfRBhDQ5JczEaujhHb0FlclMFzLpDTepEEgxijAL6VSCNcPLPw6aa0oSEgTZsx+GFjwyIsenRmZmbkfuQMDj8PKrjjyCHZIw02im7eGokHAQhnFjZ8GAux/+8jOhoFhX9DCIG1EsPfD9jMC5j4/rO/If4BCiyOk7IAfLMAAAAASUVORK5CYII=');vertical-align:middle;font-size:11px;color:#888;margin-right:6px;margin-top:-3px;background-position:center;height:20px;width:20px}.flex_context{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center}.flex_bd{-webkit-box-flex:1;-webkit-flex:1;flex:1;word-wrap:break-word;word-break:break-all}.original_page{background-color:#fff;font-size:16px}.account_info{padding:0 0 20px}.account_info .flex_bd{padding-left:.85em}.radius_avatar.account_avatar{width:40px;height:40px;padding:0}.account_nickname{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;line-height:1.2;color:#576b95;font-size:14px}.account_nickname_inner{font-weight:400;vertical-align:top}.account_desc{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;color:#b2b2b2;font-size:13px;line-height:1.2;padding-top:.3em}.account_desc_inner{display:inline;vertical-align:top}.share_notice{margin-bottom:20px;word-wrap:break-word;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto}.share_media{padding-bottom:18px}.original_panel{padding:20px;background-color:#fcfcfc;word-wrap:break-word;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto;overflow:hidden;position:relative}.original_panel:after{content:" ";border:1px solid #d8d8d8;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;position:absolute;top:0;left:0;width:200%;height:200%;-webkit-transform:scale(0.5);transform:scale(0.5);-webkit-transform-origin:0 0;transform-origin:0 0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}.original_panel .original_account{margin-bottom:18px;position:relative;z-index:1}.original_panel .original_account_avatar{width:28px;height:28px;padding:0}.original_panel .original_account_nickname{padding-left:.85em;font-size:15px;color:#576b95}.original_panel_title{font-size:23px;color:#000;margin:0 0 16px}.original_panel_content{color:#333}.original_panel_tool{padding-top:20px;position:relative;z-index:1}.original_cell_nickname{display:inline-block;vertical-align:middle;font-weight:400;width:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;max-width:8em;color:#000}.original_tool_area{padding:1.17em 0;border-width:0;position:relative}.original_tool_area:before{content:" ";position:absolute;left:0;top:0;right:0;height:1px;border-top:1px solid #dfdfdf;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(0.5);transform:scaleY(0.5)}.original_tool_area:after{content:" ";position:absolute;left:0;bottom:0;right:0;height:1px;border-bottom:1px solid #dfdfdf;-webkit-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:scaleY(0.5);transform:scaleY(0.5)}.original_tool_area .radius_avatar{width:20px;height:20px;margin-right:.2em}.original_tool_area .flex_cell{padding:0;font-size:14px}.original_tool_area .icon_access:after{margin-right:4px;top:0}.preview_appmsg .rich_media_title{margin-top:1.5em}.preview_appmsg .account_info{padding-top:3em}.original_page{background-color:transparent}.account_info{-webkit-tap-highlight-color:rgba(0,0,0,0);outline:0;padding-bottom:20px;font-size:14px}.account_info.appmsg_account_info{padding-bottom:32px}.account_info .radius_avatar img{background-color:transparent}.share_notice{font-size:16px;word-wrap:break-word;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto}.original_panel{background-color:#fafafa}.original_panel:after{border-color:#e6e6e6}.original_panel .original_account_avatar{width:30px;height:30px}.original_panel_tool{font-size:14px}.original_panel_tool a{color:#576b95}.original_panel_content{font-size:17px}.share_media{padding-bottom:30px}.icon_appmsg_tag{display:inline-block;vertical-align:middle;padding:0 .5em;font-size:12px;line-height:1.5;background-color:#c3c3c3;color:#fff;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;width:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;max-width:70%}.icon_appmsg_tag.primary{color:#3bb638;padding:4px .78em;background-color:rgba(9,187,7,0.08);font-size:12px;border-top-left-radius:.95em 50%;-moz-border-radius-topleft:.95em 50%;-webkit-border-top-left-radius:.95em 50%;border-top-right-radius:.95em 50%;-moz-border-radius-topright:.95em 50%;-webkit-border-top-right-radius:.95em 50%;border-bottom-left-radius:.95em 50%;-moz-border-radius-bottomleft:.95em 50%;-webkit-border-bottom-left-radius:.95em 50%;border-bottom-right-radius:.95em 50%;-moz-border-radius-bottomright:.95em 50%;-webkit-border-bottom-right-radius:.95em 50%}.icon_appmsg_tag.default{border:1px solid rgba(0,0,0,0.1);color:rgba(0,0,0,0.3);background-color:transparent;padding:0 .54em;font-size:15px;line-height:1.3;border-top-left-radius:.67em 50%;-moz-border-radius-topleft:.67em 50%;-webkit-border-top-left-radius:.67em 50%;border-top-right-radius:.67em 50%;-moz-border-radius-topright:.67em 50%;-webkit-border-top-right-radius:.67em 50%;border-bottom-left-radius:.67em 50%;-moz-border-radius-bottomleft:.67em 50%;-webkit-border-bottom-left-radius:.67em 50%;border-bottom-right-radius:.67em 50%;-moz-border-radius-bottomright:.67em 50%;-webkit-border-bottom-right-radius:.67em 50%}.rich_media_meta_list .icon_appmsg_tag.default{margin-top:-1px}.icon_appmsg_tag.title_tag{background-color:#d04b4e}.icon_global_tag_wrp{text-align:right;padding-bottom:12px}.icon_global_tag{background-color:rgba(118,118,118,0.16);color:rgba(0,0,0,0.41);line-height:2.2;border-top-left-radius:1em 50%;-moz-border-radius-topleft:1em 50%;-webkit-border-top-left-radius:1em 50%;border-bottom-left-radius:1em 50%;-moz-border-radius-bottomleft:1em 50%;-webkit-border-bottom-left-radius:1em 50%;padding:0 1.8em 0 1.34em;font-size:12px;margin-right:-24px;display:inline-block;vertical-align:top}.global_plain_btn{display:inline-block;vertical-align:middle;padding:0 1em;line-height:2;font-size:14px;-webkit-tap-highlight-color:rgba(0,0,0,0);border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px}.global_plain_btn.primary{color:#1aad19;border:1px solid currentColor}.global_plain_btn.primary:active{color:rgba(26,173,25,0.6)}.wx_video_context{color:#fefefe;position:relative;background-color:#000}.wx_video_thumb,.wx_video_thumb_primary{position:absolute;left:0;width:100%;height:100%!important;top:0}.wx_video_thumb_primary{-webkit-background-size:cover;background-size:cover;background-position:50% 50%;background-repeat:no-repeat}.wx_video_play_btn{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);margin-top:-2px;font-size:0;border-width:0;background-color:transparent;padding:0;outline:0;z-index:2}.wx_video_play_btn:before{content:" ";display:inline-block;width:0;height:0;border-width:14px 0 14px 25px;border-color:transparent transparent transparent #fff;border-style:dotted dotted dotted solid}.wx_video_mask{position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;background-color:rgba(0,0,0,0.5)}.place_audio_area{min-height:100px;background-color:#fdfdfd;display:block;margin:16px 0}.place_music_area{min-height:68px;background-color:#fdfdfd;display:block;margin:17px 0 16px}.rich_media_empty_extra{background-color:#fafafa}.appmsg_skin_default.rich_media_empty_extra{background-color:#fff}.appmsg_skin_default .rich_media_area_primary{background-color:#fff}.appmsg_skin_default .rich_media_area_primary .weui-loadmore_line .weui-loadmore__tips{background-color:#fff}.appmsg_style_default .rich_media_tool{padding-top:15px}.rich_media_title_ios{font-weight:700}.read-more__area{margin:30px 0}.read-more__desc{margin-bottom:10px}.read-more__article__extra{font-size:14px;color:rgba(0,0,0,0.5)}.read-more__article__item{margin-bottom:10px}</style>
+<style>
+        </style>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg_new/pc435ee6.css">
+<![endif]-->
+
+    </head>
+    <body id="activity-detail" class="zh_CN sougou_body  appmsg_skin_default appmsg_style_default">
+        
+<script nonce="1799824546" type="text/javascript">
+    var biz = ""||"MjM5MDE0Mjc4MA==";
+    var sn = "" || ""|| "";
+    var mid = "" || ""|| "2650995584";
+    var idx = "" || "" || "1";
+    window.__allowLoadResFromMp = true; 
+    
+        
+</script>
+<script nonce="1799824546" type="text/javascript">
+var page_begintime=+new Date,is_rumor="",norumor="";
+1*is_rumor&&!(1*norumor)&&biz&&mid&&(document.referrer&&-1!=document.referrer.indexOf("mp.weixin.qq.com/mp/rumor")||(location.href="http://mp.weixin.qq.com/mp/rumor?action=info&__biz="+biz+"&mid="+mid+"&idx="+idx+"&sn="+sn+"#wechat_redirect"));
+</script>
+<script nonce="1799824546" type="text/javascript">
+var MutationObserver=window.WebKitMutationObserver||window.MutationObserver||window.MozMutationObserver,isDangerSrc=function(t){
+if(t){
+var e=t.match(/http(?:s)?:\/\/([^\/]+?)(\/|$)/);
+if(e&&!/qq\.com(\:8080)?$/.test(e[1])&&!/weishi\.com$/.test(e[1]))return!0;
+}
+return!1;
+},ishttp=0==location.href.indexOf("http://");
+-1==location.href.indexOf("safe=0")&&ishttp&&"function"==typeof MutationObserver&&"mp.weixin.qq.com"==location.host&&(window.__observer_data={
+count:0,
+exec_time:0,
+list:[]
+},window.__observer=new MutationObserver(function(t){
+window.__observer_data.count++;
+var e=new Date,r=[];
+t.forEach(function(t){
+for(var e=t.addedNodes,o=0;o<e.length;o++){
+var n=e[o];
+if("SCRIPT"===n.tagName){
+var i=n.src;
+isDangerSrc(i)&&(window.__observer_data.list.push(i),r.push(n)),!i&&window.__nonce_str&&n.getAttribute("nonce")!=window.__nonce_str&&(window.__observer_data.list.push("inlinescript_without_nonce"),
+r.push(n));
+}
+}
+});
+for(var o=0;o<r.length;o++){
+var n=r[o];
+n.parentNode&&n.parentNode.removeChild(n);
+}
+window.__observer_data.exec_time+=new Date-e;
+}),window.__observer.observe(document,{
+subtree:!0,
+childList:!0
+})),function(){
+if(-1==location.href.indexOf("safe=0")&&Math.random()<.01&&ishttp&&HTMLScriptElement.prototype.__lookupSetter__&&"undefined"!=typeof Object.defineProperty){
+window.__danger_src={
+xmlhttprequest:[],
+script_src:[],
+script_setAttribute:[]
+};
+var t="$"+Math.random();
+HTMLScriptElement.prototype.__old_method_script_src=HTMLScriptElement.prototype.__lookupSetter__("src"),
+HTMLScriptElement.prototype.__defineSetter__("src",function(t){
+t&&isDangerSrc(t)&&window.__danger_src.script_src.push(t),this.__old_method_script_src(t);
+});
+var e="element_setAttribute"+t;
+Object.defineProperty(Element.prototype,e,{
+value:Element.prototype.setAttribute,
+enumerable:!1
+}),Element.prototype.setAttribute=function(t,r){
+"SCRIPT"==this.tagName&&"src"==t&&isDangerSrc(r)&&window.__danger_src.script_setAttribute.push(r),
+this[e](t,r);
+};
+}
+}();
+</script>
+
+        <link rel="dns-prefetch" href="//res.wx.qq.com">
+<link rel="dns-prefetch" href="//mmbiz.qpic.cn">
+<link rel="shortcut icon" type="image/x-icon" href="//res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico">
+<link rel="mask-icon" href="//res.wx.qq.com/a/wx_fed/assets/res/MjliNWVm.svg" color="#4C4C4C">
+<link rel="apple-touch-icon-precomposed" href="//res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png">
+<script nonce="1799824546" type="text/javascript">
+    String.prototype.html = function(encode) {
+        var replace =["&#39;", "'", "&quot;", '"', "&nbsp;", " ", "&gt;", ">", "&lt;", "<", "&yen;", "¥", "&amp;", "&"];
+        
+		
+		
+		
+		
+        
+        var replaceReverse = ["&", "&amp;", "¥", "&yen;", "<", "&lt;", ">", "&gt;", " ", "&nbsp;", '"', "&quot;", "'", "&#39;"];
+	    var target;
+	    if (encode) {
+	    	target = replaceReverse;
+	    } else {
+	    	target = replace;
+	    }
+        for (var i=0,str=this;i< target.length;i+= 2) {
+             str=str.replace(new RegExp(target[i],'g'),target[i+1]);
+        }
+        return str;
+    };
+
+    window.isInWeixinApp = function() {
+        return /MicroMessenger/.test(navigator.userAgent);
+    };
+
+    window.getQueryFromURL = function(url) {
+        url = url || 'http://qq.com/s?a=b#rd'; 
+        var tmp = url.split('?'),
+            query = (tmp[1] || "").split('#')[0].split('&'),
+            params = {};
+        for (var i=0; i<query.length; i++) {
+            var arg = query[i].split('=');
+            params[arg[0]] = arg[1];
+        }
+        if (params['pass_ticket']) {
+        	params['pass_ticket'] = encodeURIComponent(params['pass_ticket'].html(false).html(false).replace(/\s/g,"+"));
+        }
+        return params;
+    };
+
+    (function() {
+	    var params = getQueryFromURL(location.href);
+        window.uin = params['uin'] || "" || '';
+        window.key = params['key'] || "" || '';
+        window.wxtoken = params['wxtoken'] || '';
+        window.pass_ticket = params['pass_ticket'] || '';
+        window.appmsg_token = "";
+    })();
+
+    function wx_loaderror() {
+        if (location.pathname === '/bizmall/reward') {
+            new Image().src = '/mp/jsreport?key=96&content=reward_res_load_err&r=' + Math.random();
+        }
+    }
+
+</script>
+
+<script nonce="1799824546" type="text/javascript">
+        window.__moon_report_uin = "0";
+            window.no_moon_ls = 0;
+    </script>
+
+        
+<script nonce="1799824546" type="text/javascript">
+    var write_sceen_time = (+new Date());
+</script>
+
+<div id="js_article" class="rich_media">
+    
+    <div id="js_top_ad_area" class="top_banner"></div>
+    
+    <div class="rich_media_inner">
+
+        
+        
+        <div id="page-content" class="rich_media_area_primary">
+          <div class="rich_media_area_primary_inner">
+                                    
+                        
+
+            <div id="img-content">
+
+                
+                <h2 class="rich_media_title" id="activity-name">
+                    
+                    
+                    TensorFlow领衔，七大深度学习框架大对比！
+
+                                                                                </h2>
+                <div id="meta_content" class="rich_media_meta_list">
+                                                                                <span class="rich_media_meta rich_media_meta_text">
+                                                黄文坚 唐源
+                                            </span>
+                                        
+                                        <span class="rich_media_meta rich_media_meta_nickname" id="profileBt">
+                      <a href="javascript:void(0);" id="js_name">
+                        InfoQ                      </a>
+                      <div id="js_profile_qrcode" class="profile_container" style="display:none;">
+                          <div class="profile_inner">
+                              <strong class="profile_nickname">InfoQ</strong>
+                              <img class="profile_avatar" id="js_profile_qrcode_img" src="" alt="">
+
+                              <p class="profile_meta">
+                              <label class="profile_meta_label">微信号</label>
+                              <span class="profile_meta_value">infoqchina</span>
+                              </p>
+
+                              <p class="profile_meta">
+                              <label class="profile_meta_label">功能介绍</label>
+                              <span class="profile_meta_value">有内容的技术社区媒体</span>
+                              </p>
+                              
+                          </div>
+                          <span class="profile_arrow_wrp" id="js_profile_arrow_wrp">
+                              <i class="profile_arrow arrow_out"></i>
+                              <i class="profile_arrow arrow_in"></i>
+                          </span>
+                      </div>
+                    </span>
+
+
+                    <em id="publish_time" class="rich_media_meta rich_media_meta_text"></em>
+
+
+
+
+
+                </div>
+                
+                
+                
+                
+                                                
+                                                                
+                                
+                
+                <div class="rich_media_content " id="js_content">
+                    
+
+                    
+
+                    
+                    
+                    <section style="color: rgb(63, 63, 63); font-size: 14px; font-family: Avenir, -apple-system-font, 微软雅黑, sans-serif; text-align: center; box-sizing: border-box;"><section class="firstImage" style="box-sizing: border-box; text-align: left;">
+		<img data-src="http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvI2VRcibTsCoL2M65mknMBhxYpGoAM18m7hibGDibFmEpeiaLjTkxWam11w/0?wx_fmt=jpeg" style="width: 100%; border-radius: 4px; margin-bottom: 25px;" data-type="jpeg" data-ratio="0.5975" data-w="800"  />
+	</section><section class="h1" style="box-sizing: border-box; color: rgb(145, 145, 145); text-align: left; line-height: 1em; margin-top: 13px; padding-left: 14px;">
+		作者｜黄文坚 唐源	</section><section class="h1" style="box-sizing: border-box; color: rgb(145, 145, 145); text-align: left; line-height: 1em; margin-top: 13px; padding-left: 14px;">
+		编辑｜小智	</section><section class="preface" style="box-sizing: border-box; font-size: 15px; text-align: justify; line-height: 27px; color: rgb(89, 89, 89); background-color: rgb(239, 239, 239); padding: 19px; margin-top: 40px; margin-right: 8px; margin-left: 8px;">
+		TensorFlow 在 2015 年年底一出现就受到了极大的关注，在一个月内获得了 GitHub上超过一万颗星的关注，目前在所有的机器学习、深度学习项目中排名第一，甚至在所有的 Python 项目中也排名第一。	</section><section class="h2" style="box-sizing: border-box; font-size: 20px;">
+		<span style="height: 57px; line-height: 62px; color: rgb(0, 179, 138); border-bottom: 2px solid rgb(0, 179, 139); background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvjx4bVwRMas9IYDkImJpDwqrGRCqALK5Qc29jGFibNO8CG5IYvDn0TzQ/0?wx_fmt=jpeg&quot;); background-position: 50% 50%; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 55px; margin-top: 38px; margin-bottom: 10px; display: inline-block;">编者按</span>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Google于2017年2月16日（北京时间）凌晨2点在美国加利福尼亚州山景城举办了首届TensorFlow开发者峰会。Google现场宣布全球领先的深度学习开源框架TensorFlow正式对外发布V1.0版本，并保证Google的本次发布版本的API接口满足生产环境稳定性要求。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">本文我们将主要介绍TensorFlow的技术相关，同时对比Caffe、Theano 、Torch、Keras、MXNet、CNTK等其他7种深度学习框架。本文节选自《TensorFlow实战》第二章。</p><section class="h2" style="box-sizing: border-box; font-size: 20px;">
+		<span style="height: 57px; line-height: 62px; color: rgb(0, 179, 138); border-bottom: 2px solid rgb(0, 179, 139); background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvjx4bVwRMas9IYDkImJpDwqrGRCqALK5Qc29jGFibNO8CG5IYvDn0TzQ/0?wx_fmt=jpeg&quot;); background-position: 50% 50%; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 55px; margin-top: 38px; margin-bottom: 10px; display: inline-block;">主流深度学习框架对比</span>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">深度学习研究的热潮持续高涨，各种开源深度学习框架也层出不穷，其中包括TensorFlow、Caffe8、Keras9、CNTK10、Torch711、MXNet12、Leaf13、Theano14、DeepLearning415、Lasagne16、Neon17，等等。然而TensorFlow却杀出重围，在关注度和用户数上都占据绝对优势，大有一统江湖之势。表2-1所示为各个开源框架在GitHub上的数据统计（数据统计于2017年1月3日），可以看到TensorFlow在star数量、fork数量、contributor数量这三个数据上都完胜其他对手。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">究其原因，主要是Google在业界的号召力确实强大，之前也有许多成功的开源项目，以及Google强大的人工智能研发水平，都让大家对Google的深度学习框架充满信心，以至于TensorFlow在2015年11月刚开源的第一个月就积累了10000+的star。其次，TensorFlow确实在很多方面拥有优异的表现，比如设计神经网络结构的代码的简洁度，分布式深度学习算法的执行效率，还有部署的便利性，都是其得以胜出的亮点。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">如果一直关注着TensorFlow的开发进度，就会发现基本上每星期TensorFlow都会有1万行以上的代码更新，多则数万行。产品本身优异的质量、快速的迭代更新、活跃的社区和积极的反馈，形成了良性循环，可以想见TensorFlow未来将继续在各种深度学习框架中独占鳌头。</p><section class="image" style="box-sizing: border-box; padding: 14px 11px 16px; margin-top: 50px; margin-right: 8px; margin-left: 8px;">
+		<img data-src="http://mmbiz.qpic.cn/mmbiz_png/YriaiaJPb26VO9b45rYergV9VNqq44hUXvm7h5z8KGzHt5QxAANC7zHgY82LS7dHUDbcsVqwOdQ9fgTXeT6ufCXQ/0?wx_fmt=png" style="width: 100%;" data-type="png" data-ratio="0.7978339350180506" data-w="554"  />
+		<p style="box-sizing: border-box; white-space: pre-line; margin-top: 13px; line-height: 22px; font-size: 13px; color: rgb(145, 145, 145);">表2-1  各个开源框架在GitHub上的数据统计</p>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">观察表2-1还可以发现，Google、Microsoft、Facebook等巨头都参与了这场深度学习框架大战，此外，还有毕业于伯克利大学的贾扬清主导开发的Caffe，蒙特利尔大学Lisa Lab团队开发的Theano，以及其他个人或商业组织贡献的框架。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">另外，可以看到各大主流框架基本都支持Python，目前Python在科学计算和数据挖掘领域可以说是独领风骚。虽然有来自R、Julia等语言的竞争压力，但是Python的各种库实在是太完善了，Web开发、数据可视化、数据预处理、数据库连接、爬虫等无所不能，有一个完美的生态环境。仅在数据挖据工具链上，Python就有NumPy、SciPy、Pandas、Scikit-learn、XGBoost等组件，做数据采集和预处理都非常方便，并且之后的模型训练阶段可以和TensorFlow等基于Python的深度学习框架完美衔接。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">表2-2和图2-1所示为对主流的深度学习框架TensorFlow、Caffe、CNTK、Theano、Torch在各个维度的评分，本书2.2节会对各个深度学习框架进行比较详细的介绍。</p><section class="image" style="box-sizing: border-box; padding: 14px 11px 16px; margin-top: 50px; margin-right: 8px; margin-left: 8px;">
+		<img data-src="http://mmbiz.qpic.cn/mmbiz_png/YriaiaJPb26VO9b45rYergV9VNqq44hUXv1V1RsyhxKLGsvClrBEiaiclXT3FlUccmDcvcSa6E5icLaWZ58MfrdqL8Q/0?wx_fmt=png" style="width: 100%;" data-type="png" data-ratio="0.5276073619631901" data-w="489"  />
+		<p style="box-sizing: border-box; white-space: pre-line; margin-top: 13px; line-height: 22px; font-size: 13px; color: rgb(145, 145, 145);">图2-1  主流深度学习框架对比图</p>
+	</section><section class="h2" style="box-sizing: border-box; font-size: 20px;">
+		<span style="height: 57px; line-height: 62px; color: rgb(0, 179, 138); border-bottom: 2px solid rgb(0, 179, 139); background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvjx4bVwRMas9IYDkImJpDwqrGRCqALK5Qc29jGFibNO8CG5IYvDn0TzQ/0?wx_fmt=jpeg&quot;); background-position: 50% 50%; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 55px; margin-top: 38px; margin-bottom: 10px; display: inline-block;">各深度学习框架简介</span>
+	</section><section class="h3" style="box-sizing: border-box; font-size: 16px;">
+		<span style="display: inline-block; height: 45px; line-height: 45px; color: rgb(8, 156, 187); background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvVvtq9IjdSQq6iapsXticdtKibyIusVhqI9Bjiawpf7xs13RPzYX7zf8g2Q/0?wx_fmt=jpeg&quot;); background-position: left center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 45px; padding-left: 30px; margin-top: 38px; margin-bottom: 10px;">TensorFlow</span>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">TensorFlow是相对高阶的机器学习库，用户可以方便地用它设计神经网络结构，而不必为了追求高效率的实现亲自写C++或CUDA18代码。它和Theano一样都支持自动求导，用户不需要再通过反向传播求解梯度。其核心代码和Caffe一样是用C++编写的，使用C++简化了线上部署的复杂度，并让手机这种内存和CPU资源都紧张的设备可以运行复杂模型（Python则会比较消耗资源，并且执行效率不高）。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">除了核心代码的C++接口，TensorFlow还有官方的Python、Go和Java接口，是通过SWIG（Simplified Wrapper and Interface Generator）实现的，这样用户就可以在一个硬件配置较好的机器中用Python进行实验，并在资源比较紧张的嵌入式环境或需要低延迟的环境中用C++部署模型。SWIG支持给C/C++代码提供各种语言的接口，因此其他脚本语言的接口未来也可以通过SWIG方便地添加。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">不过使用Python时有一个影响效率的问题是，每一个mini-batch要从Python中feed到网络中，这个过程在mini-batch的数据量很小或者运算时间很短时，可能会带来影响比较大的延迟。现在TensorFlow还有非官方的Julia、Node.js、R的接口支持，地址如下：</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">Julia：</strong>github.com/malmaud/TensorFlow.jl</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">Node.js：</strong>github.com/node-tensorflow/node-tensorflow</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">R：</strong>github.com/rstudio/tensorflow</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">TensorFlow也有内置的TF.Learn和TF.Slim等上层组件可以帮助快速地设计新网络，并且兼容Scikit-learn estimator接口，可以方便地实现evaluate、grid search、cross validation等功能。同时TensorFlow不只局限于神经网络，其数据流式图支持非常自由的算法表达，当然也可以轻松实现深度学习以外的机器学习算法。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">事实上，只要可以将计算表示成计算图的形式，就可以使用TensorFlow。用户可以写内层循环代码控制计算图分支的计算，TensorFlow会自动将相关的分支转为子图并执行迭代运算。TensorFlow也可以将计算图中的各个节点分配到不同的设备执行，充分利用硬件资源。定义新的节点只需要写一个Python函数，如果没有对应的底层运算核，那么可能需要写C++或者CUDA代码实现运算操作。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">在数据并行模式上，TensorFlow和Parameter Server很像，但TensorFlow有独立的Variable node，不像其他框架有一个全局统一的参数服务器，因此参数同步更自由。TensorFlow和Spark的核心都是一个数据计算的流式图，Spark面向的是大规模的数据，支持SQL等操作，而TensorFlow主要面向内存足以装载模型参数的环境，这样可以最大化计算效率。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">TensorFlow的另外一个重要特点是它灵活的移植性，可以将同一份代码几乎不经过修改就轻松地部署到有任意数量CPU或GPU的PC、服务器或者移动设备上。相比于Theano，TensorFlow还有一个优势就是它极快的编译速度，在定义新网络结构时，Theano通常需要长时间的编译，因此尝试新模型需要比较大的代价，而TensorFlow完全没有这个问题。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">TensorFlow还有功能强大的可视化组件TensorBoard，能可视化网络结构和训练过程，对于观察复杂的网络结构和监控长时间、大规模的训练很有帮助。TensorFlow针对生产环境高度优化，它产品级的高质量代码和设计都可以保证在生产环境中稳定运行，同时一旦TensorFlow广泛地被工业界使用，将产生良性循环，成为深度学习领域的事实标准。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">除了支持常见的网络结构[卷积神经网络（Convolutional Neural Network，CNN）、循环神经网络（Recurent Neural Network，RNN）]外，TensorFlow还支持深度强化学习乃至其他计算密集的科学计算（如偏微分方程求解等）。TensorFlow此前不支持symbolic loop，需要使用Python循环而无法进行图编译优化，但最近新加入的XLA已经开始支持JIT和AOT，另外它使用bucketing trick也可以比较高效地实现循环神经网络。TensorFlow的一个薄弱地方可能在于计算图必须构建为静态图，这让很多计算变得难以实现，尤其是序列预测中经常使用的beam search。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">TensorFlow的用户能够将训练好的模型方便地部署到多种硬件、操作系统平台上，支持Intel和AMD的CPU，通过CUDA支持NVIDIA的GPU（最近也开始通过OpenCL支持AMD的GPU，但没有CUDA成熟），支持Linux和Mac，最近在0.12版本中也开始尝试支持Windows。在工业生产环境中，硬件设备有些是最新款的，有些是用了几年的老机型，来源可能比较复杂，TensorFlow的异构性让它能够全面地支持各种硬件和操作系统。同时，其在CPU上的矩阵运算库使用了Eigen而不是BLAS库，能够基于ARM架构编译和优化，因此在移动设备（Android和iOS）上表现得很好。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">TensorFlow在最开始发布时只支持单机，而且只支持CUDA 6.5和cuDNN v2，并且没有官方和其他深度学习框架的对比结果。在2015年年底，许多其他框架做了各种性能对比评测，每次TensorFlow都会作为较差的对照组出现。那个时期的TensorFlow真的不快，性能上仅和普遍认为很慢的Theano比肩，在各个框架中可以算是垫底。但是凭借Google强大的开发实力，很快支持了新版的cuDNN（目前支持cuDNN v5.1），在单GPU上的性能追上了其他框架。表2-3所示为各个框架在AlexNet上单GPU的性能评测。</p><section class="image" style="box-sizing: border-box; padding: 14px 11px 16px; margin-top: 50px; margin-right: 8px; margin-left: 8px;">
+		<img data-src="http://mmbiz.qpic.cn/mmbiz_png/YriaiaJPb26VO9b45rYergV9VNqq44hUXvJV2L8d6qTZWmtncbDzbuas5GlIYZQjicrHicfH0f64jknZRjehIGTGicA/0?wx_fmt=png" style="width: 100%;" data-type="png" data-ratio="0.9206642066420664" data-w="542"  />
+		<p style="box-sizing: border-box; white-space: pre-line; margin-top: 13px; line-height: 22px; font-size: 13px; color: rgb(145, 145, 145);">表2-3  各深度学习框架在AlexNet上的性能对比</p>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">目前在单GPU的条件下，绝大多数深度学习框架都依赖于cuDNN，因此只要硬件计算能力或者内存分配差异不大，最终训练速度不会相差太大。但是对于大规模深度学习来说，巨大的数据量使得单机很难在有限的时间完成训练。这时需要分布式计算使GPU集群乃至TPU集群并行计算，共同训练出一个模型，所以框架的分布式性能是至关重要的。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">TensorFlow在2016年4月开源了分布式版本，使用16块GPU可达单GPU的15倍提速，在50块GPU时可达到40倍提速，分布式的效率很高。目前原生支持的分布式深度学习框架不多，只有TensorFlow、CNTK、DeepLearning4J、MXNet等。不过目前TensorFlow的设计对不同设备间的通信优化得不是很好，其单机的reduction只能用CPU处理，分布式的通信使用基于socket的RPC，而不是速度更快的RDMA，所以其分布式性能可能还没有达到最优。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Google 在2016年2月开源了TensorFlow Serving19，这个组件可以将TensorFlow训练好的模型导出，并部署成可以对外提供预测服务的RESTful接口，如图2-2所示。有了这个组件，TensorFlow就可以实现应用机器学习的全流程：从训练模型、调试参数，到打包模型，最后部署服务，名副其实是一个从研究到生产整条流水线都齐备的框架。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">这里引用TensorFlow内部开发人员的描述：“TensorFlow Serving是一个为生产环境而设计的高性能的机器学习服务系统。它可以同时运行多个大规模深度学习模型，支持模型生命周期管理、算法实验，并可以高效地利用GPU资源，让TensorFlow训练好的模型更快捷方便地投入到实际生产环境”。除了TensorFlow以外的其他框架都缺少为生产环境部署的考虑，而Google作为广泛在实际产品中应用深度学习的巨头可能也意识到了这个机会，因此开发了这个部署服务的平台。TensorFlow Serving可以说是一副王牌，将会帮TensorFlow成为行业标准做出巨大贡献。</p><section class="image" style="box-sizing: border-box; padding: 14px 11px 16px; margin-top: 50px; margin-right: 8px; margin-left: 8px;">
+		<p><img data-s="300,640" data-type="jpeg" data-src="http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvpobmrOUEpAGCnUjq3WbhloibubkTnyKbDzpbTDUMpsZsoUvhYJSluTw/0?wx_fmt=jpeg" data-ratio="1.1748251748251748" data-w="286"  /></p>
+		<p style="box-sizing: border-box; white-space: pre-line; margin-top: 13px; line-height: 22px; font-size: 13px; color: rgb(145, 145, 145);">图2-2  TensorFlow Serving架构</p>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">TensorBoard是TensorFlow的一组Web应用，用来监控TensorFlow运行过程，或可视化Computation Graph。TensorBoard目前支持5种可视化：标量（scalars）、图片（images）、音频（audio）、直方图（histograms）和计算图（Computation Graph）。TensorBoard的Events Dashboard可以用来持续地监控运行时的关键指标，比如loss、学习速率（learning rate）或是验证集上的准确率（accuracy）；Image Dashboard则可以展示训练过程中用户设定保存的图片，比如某个训练中间结果用Matplotlib等绘制（plot）出来的图片；Graph Explorer则可以完全展示一个TensorFlow的计算图，并且支持缩放拖曳和查看节点属性。TensorBoard的可视化效果如图2-3和图2-4所示。</p><section class="image" style="box-sizing: border-box; padding: 14px 11px 16px; margin-top: 50px; margin-right: 8px; margin-left: 8px;">
+		<p><img data-s="300,640" data-type="jpeg" data-src="http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXv6lvMTcykLGFyBNGATCIleNhUBkHzibRiboVl6hZkgUaCjd9z0YdmtMnQ/0?wx_fmt=jpeg" data-ratio="0.5340314136125655" data-w="382"  /></p>
+		<p style="box-sizing: border-box; white-space: pre-line; margin-top: 13px; line-height: 22px; font-size: 13px; color: rgb(145, 145, 145);">图2-3  TensorBoard的loss标量的可视化</p>
+	</section><section class="image" style="box-sizing: border-box; padding: 14px 11px 16px; margin-top: 50px; margin-right: 8px; margin-left: 8px;">
+		<p><img data-s="300,640" data-type="jpeg" data-src="http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXv4hqyD8sckNzYwtPQlqN6ibgib8YiarZ7AXHiclGjZzlKA7Fe2OIDpnYFicA/0?wx_fmt=jpeg" data-ratio="1.4497206703910615" data-w="358"  /></p>
+		<p style="box-sizing: border-box; white-space: pre-line; margin-top: 13px; line-height: 22px; font-size: 13px; color: rgb(145, 145, 145);">图2-4  TensorBoard的模型结构可视化</p>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">TensorFlow拥有产品级的高质量代码，有Google强大的开发、维护能力的加持，整体架构设计也非常优秀。相比于同样基于Python的老牌对手Theano，TensorFlow更成熟、更完善，同时Theano的很多主要开发者都去了Google开发TensorFlow（例如书籍Deep Learning的作者Ian Goodfellow，他后来去了OpenAI）。Google作为巨头公司有比高校或者个人开发者多得多的资源投入到TensorFlow的研发，可以预见，TensorFlow未来的发展将会是飞速的，可能会把大学或者个人维护的深度学习框架远远甩在身后。</p><section class="h3" style="box-sizing: border-box; font-size: 16px;">
+		<span style="display: inline-block; height: 45px; line-height: 45px; color: rgb(8, 156, 187); background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvVvtq9IjdSQq6iapsXticdtKibyIusVhqI9Bjiawpf7xs13RPzYX7zf8g2Q/0?wx_fmt=jpeg&quot;); background-position: left center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 45px; padding-left: 30px; margin-top: 38px; margin-bottom: 10px;">Caffe</span>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">官方网址：</strong>caffe.berkeleyvision.org/</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">GitHub：</strong>github.com/BVLC/caffe</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Caffe是一个被广泛使用的开源深度学习框架（在TensorFlow出现之前一直是深度学习领域GitHub star最多的项目），目前由伯克利视觉学中心（Berkeley Vision and Learning Center，BVLC）进行维护。Caffe的创始人是加州大学伯克利的Ph.D.贾扬清，他同时也是TensorFlow的作者之一，曾工作于MSRA、NEC和Google Brain，目前就职于Facebook FAIR实验室。Caffe的主要优势包括如下几点：</p><ol style="margin-top: 10px; line-height: 1em; text-align: left;" class=" list-paddingleft-2"><li><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; color: rgb(74, 74, 74);">容易上手，网络结构都是以配置文件形式定义，不需要用代码设计网络。</p></li><li><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; color: rgb(74, 74, 74);">训练速度快，能够训练state-of-the-art的模型与大规模的数据。</p></li><li><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; color: rgb(74, 74, 74);">组件模块化，可以方便地拓展到新的模型和学习任务上。</p></li></ol><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Caffe的核心概念是Layer，每一个神经网络的模块都是一个Layer。Layer接收输入数据，同时经过内部计算产生输出数据。设计网络结构时，只需要把各个Layer拼接在一起构成完整的网络（通过写protobuf配置文件定义）。比如卷积的Layer，它的输入就是图片的全部像素点，内部进行的操作是各种像素值与Layer参数的convolution操作，最后输出的是所有卷积核filter的结果。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">每一个Layer需要定义两种运算，一种是正向（forward）的运算，即从输入数据计算输出结果，也就是模型的预测过程；另一种是反向（backward）的运算，从输出端的gradient求解相对于输入的gradient，即反向传播算法，这部分也就是模型的训练过程。实现新Layer时，需要将正向和反向两种计算过程的函数都实现，这部分计算需要用户自己写C++或者CUDA（当需要运行在GPU时）代码，对普通用户来说还是非常难上手的。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">正如它的名字Convolutional Architecture for Fast Feature Embedding所描述的，Caffe最开始设计时的目标只针对于图像，没有考虑文本、语音或者时间序列的数据，因此Caffe对卷积神经网络的支持非常好，但对时间序列RNN、LSTM等支持得不是特别充分。同时，基于Layer的模式也对RNN不是非常友好，定义RNN结构时比较麻烦。在模型结构非常复杂时，可能需要写非常冗长的配置文件才能设计好网络，而且阅读时也比较费力。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Caffe的一大优势是拥有大量的训练好的经典模型（AlexNet、VGG、Inception）乃至其他state-of-the-art（ResNet等）的模型，收藏在它的Model Zoo（github.com/BVLC/ caffe/wiki/Model-Zoo）。因为知名度较高，Caffe被广泛地应用于前沿的工业界和学术界，许多提供源码的深度学习的论文都是使用Caffe来实现其模型的。在计算机视觉领域Caffe应用尤其多，可以用来做人脸识别、图片分类、位置检测、目标追踪等。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">虽然Caffe主要是面向学术圈和研究者的，但它的程序运行非常稳定，代码质量比较高，所以也很适合对稳定性要求严格的生产环境，可以算是第一个主流的工业级深度学习框架。因为Caffe的底层是基于C++的，因此可以在各种硬件环境编译并具有良好的移植性，支持Linux、Mac和Windows系统，也可以编译部署到移动设备系统如Android和iOS上。和其他主流深度学习库类似，Caffe也提供了Python语言接口pycaffe，在接触新任务，设计新网络时可以使用其Python接口简化操作。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">不过，通常用户还是使用Protobuf配置文件定义神经网络结构，再使用command line进行训练或者预测。Caffe的配置文件是一个JSON类型的.prototxt文件，其中使用许多顺序连接的Layer来描述神经网络结构。Caffe的二进制可执行程序会提取这些.prototxt文件并按其定义来训练神经网络。理论上，Caffe的用户可以完全不写代码，只是定义网络结构就可以完成模型训练了。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Caffe完成训练之后，用户可以把模型文件打包制作成简单易用的接口，比如可以封装成Python或MATLAB的API。不过在.prototxt文件内部设计网络节构可能会比较受限，没有像TensorFlow或者Keras那样在Python中设计网络结构方便、自由。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">更重要的是，Caffe的配置文件不能用编程的方式调整超参数，也没有提供像Scikit-learn那样好用的estimator可以方便地进行交叉验证、超参数的Grid Search等操作。Caffe在GPU上训练的性能很好（使用单块GTX 1080训练AlexNet时一天可以训练上百万张图片），但是目前仅支持单机多GPU的训练，没有原生支持分布式的训练。庆幸的是，现在有很多第三方的支持，比如雅虎开源的CaffeOnSpark，可以借助Spark的分布式框架实现Caffe的大规模分布式训练。</p><section class="h3" style="box-sizing: border-box; font-size: 16px;">
+		<span style="display: inline-block; height: 45px; line-height: 45px; color: rgb(8, 156, 187); background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvVvtq9IjdSQq6iapsXticdtKibyIusVhqI9Bjiawpf7xs13RPzYX7zf8g2Q/0?wx_fmt=jpeg&quot;); background-position: left center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 45px; padding-left: 30px; margin-top: 38px; margin-bottom: 10px;">Theano</span>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">官方网址：</strong><a style="color: #00b38b; word-break: break-all;">http://www.deeplearning.net/software/theano/</a></p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">GitHub：</strong>github.com/Theano/Theano</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Theano诞生于2008年，由蒙特利尔大学Lisa Lab团队开发并维护，是一个高性能的符号计算及深度学习库。因其出现时间早，可以算是这类库的始祖之一，也一度被认为是深度学习研究和应用的重要标准之一。Theano的核心是一个数学表达式的编译器，专门为处理大规模神经网络训练的计算而设计。它可以将用户定义的各种计算编译为高效的底层代码，并链接各种可以加速的库，比如BLAS、CUDA等。Theano允许用户定义、优化和评估包含多维数组的数学表达式，它支持将计算装载到GPU（Theano在GPU上性能不错，但是CPU上较差）。与Scikit-learn一样，Theano也很好地整合了NumPy，对GPU的透明让Theano可以较为方便地进行神经网络设计，而不必直接写CUDA代码。Theano的主要优势如下：</p><ol style="margin-top: 10px; line-height: 1em; text-align: left;" class=" list-paddingleft-2"><li><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; color: rgb(74, 74, 74);">集成NumPy，可以直接使用NumPy的ndarray，API接口学习成本低。</p></li><li><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; color: rgb(74, 74, 74);">计算稳定性好，比如可以精准地计算输出值很小的函数（像log(1+x)）。</p></li><li><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; color: rgb(74, 74, 74);">动态地生成C或者CUDA代码，用以编译成高效的机器代码。</p></li></ol><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">因为Theano非常流行，有许多人为它编写了高质量的文档和教程，用户可以方便地查找Theano的各种FAQ，比如如何保存模型、如何运行模型等。不过Theano更多地被当作一个研究工具，而不是当作产品来使用。虽然Theano支持Linux、Mac和Windows，但是没有底层C++的接口，因此模型的部署非常不方便，依赖于各种Python库，并且不支持各种移动设备，所以几乎没有在工业生产环境的应用。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Theano在调试时输出的错误信息非常难以看懂，因此DEBUG时非常痛苦。同时，Theano在生产环境使用训练好的模型进行预测时性能比较差，因为预测通常使用服务器CPU（生产环境服务器一般没有GPU，而且GPU预测单条样本延迟高反而不如CPU），但是Theano在CPU上的执行性能比较差。Theano在单GPU上执行效率不错，性能和其他框架类似。但是运算时需要将用户的Python代码转换成CUDA代码，再编译为二进制可执行文件，编译复杂模型的时间非常久。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">此外，Theano在导入时也比较慢，而且一旦设定了选择某块GPU，就无法切换到其他设备。目前，Theano在CUDA和cuDNN上不支持多GPU，只在OpenCL和Theano自己的gpuarray库上支持多GPU训练，速度暂时还比不上CUDA的版本，并且Theano目前还没有分布式的实现。不过，Theano在训练简单网络（比如很浅的MLP）时性能可能比TensorFlow好，因为全部代码都是运行时编译，不需要像TensorFlow那样每次feed mini-batch数据时都得通过低效的Python循环来实现。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Theano是一个完全基于Python（C++/CUDA代码也是打包为Python字符串）的符号计算库。用户定义的各种运算，Theano可以自动求导，省去了完全手工写神经网络反向传播算法的麻烦，也不需要像Caffe一样为Layer写C++或CUDA代码。Theano对卷积神经网络的支持很好，同时它的符号计算API支持循环控制（内部名scan），让RNN的实现非常简单并且高性能，其全面的功能也让Theano可以支持大部分state-of-the-art的网络。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Theano派生出了大量基于它的深度学习库，包括一系列的上层封装，其中有大名鼎鼎的Keras，Keras对神经网络抽象得非常合适，以至于可以随意切换执行计算的后端（目前同时支持Theano和TensorFlow）。Keras比较适合在探索阶段快速地尝试各种网络结构，组件都是可插拔的模块，只需要将一个个组件（比如卷积层、激活函数等）连接起来，但是设计新模块或者新的Layer就不太方便了。除Keras外，还有学术界非常喜爱的Lasagne，同样也是Theano的上层封装，它对神经内网络的每一层的定义都非常严谨。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">另外，还有scikit-neuralnetwork、nolearn这两个基于Lasagne的上层封装，它们将神经网络抽象为兼容Scikit-learn接口的classifier和regressor，这样就可以方便地使用Scikit-learn中经典的fit、transform、score等操作。除此之外，Theano的上层封装库还有blocks、deepy、pylearn2和Scikit-theano，可谓是一个庞大的家族。如果没有Theano，可能根本不会出现这么多好用的Python深度学习库。同样，如果没有Python科学计算的基石NumPy，就不会有SciPy、Scikit-learn和 Scikit-image，可以说Theano就是深度学习界的NumPy，是其他各类Python深度学习库的基石。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">虽然Theano非常重要，但是直接使用Theano设计大型的神经网络还是太烦琐了，用 Theano实现Google Inception就像用NumPy实现一个支持向量机（SVM）。且不说很多用户做不到用Theano实现一个Inception网络，即使能做到但是否有必要花这个时间呢？毕竟不是所有人都是基础科学工作者，大部分使用场景还是在工业应用中。所以简单易用是一个很重要的特性，这也就是其他上层封装库的价值所在：不需要总是从最基础的tensor粒度开始设计网络，而是从更上层的Layer粒度设计网络。</p><section class="h3" style="box-sizing: border-box; font-size: 16px;">
+		<span style="display: inline-block; height: 45px; line-height: 45px; color: rgb(8, 156, 187); background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvVvtq9IjdSQq6iapsXticdtKibyIusVhqI9Bjiawpf7xs13RPzYX7zf8g2Q/0?wx_fmt=jpeg&quot;); background-position: left center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 45px; padding-left: 30px; margin-top: 38px; margin-bottom: 10px;">Torch</span>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">官方网址：</strong><a style="color: #00b38b; word-break: break-all;">http://torch.ch/</a></p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">GitHub：</strong>github.com/torch/torch7</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Torch给自己的定位是LuaJIT上的一个高效的科学计算库，支持大量的机器学习算法，同时以GPU上的计算优先。Torch的历史非常悠久，但真正得到发扬光大是在Facebook开源了其深度学习的组件之后，此后包括Google、Twitter、NYU、IDIAP、Purdue等组织都大量使用Torch。Torch的目标是让设计科学计算算法变得便捷，它包含了大量的机器学习、计算机视觉、信号处理、并行运算、图像、视频、音频、网络处理的库，同时和Caffe类似，Torch拥有大量的训练好的深度学习模型。它可以支持设计非常复杂的神经网络的拓扑图结构，再并行化到CPU和GPU上，在Torch上设计新的Layer是相对简单的。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">它和TensorFlow一样使用了底层C++加上层脚本语言调用的方式，只不过Torch使用的是Lua。Lua的性能是非常优秀的（该语言经常被用来开发游戏），常见的代码可以通过透明的JIT优化达到C的性能的80%；在便利性上，Lua的语法也非常简单易读，拥有漂亮和统一的结构，易于掌握，比写C/C++简洁很多；同时，Lua拥有一个非常直接的调用C程序的接口，可以简便地使用大量基于C的库，因为底层核心是C写的，因此也可以方便地移植到各种环境。Lua支持Linux、Mac，还支持各种嵌入式系统（iOS、Android、FPGA等），只不过运行时还是必须有LuaJIT的环境，所以工业生产环境的使用相对较少，没有Caffe和TensorFlow那么多。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">为什么不简单地使用Python而是使用LuaJIT呢？官方给出了以下几点理由：</p><ol style="margin-top: 10px; line-height: 1em; text-align: left;" class=" list-paddingleft-2"><li><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; color: rgb(74, 74, 74);">LuaJIT的通用计算性能远胜于Python，而且可以直接在LuaJIT中操作C的pointers。</p></li><li><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; color: rgb(74, 74, 74);">Torch的框架，包含Lua是自洽的，而完全基于Python的程序对不同平台、系统移植性较差，依赖的外部库较多。</p></li><li><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; color: rgb(74, 74, 74);">LuaJIT的FFI拓展接口非常易学，可以方便地链接其他库到Torch中。Torch中还专门设计了N-Dimension array type的对象Tensor，Torch中的Tensor是一块内存的视图，同时一块内存可能有许多视图（Tensor）指向它，这样的设计同时兼顾了性能（直接面向内存）和便利性。同时，Torch还提供了不少相关的库，包括线性代数、卷积、傅里叶变换、绘图和统计等，如图2-5所示。</p></li></ol><section class="image" style="box-sizing: border-box; padding: 14px 11px 16px; margin-top: 50px; margin-right: 8px; margin-left: 8px;">
+		<img data-src="http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvWibycHVUpcq64uG4rSvdjp5lWxCqrYodrTr4zTvUxaE95f60mbgZ94Q/0?wx_fmt=jpeg" style="width: 100%;" data-type="jpeg" data-ratio="0.3488372093023256" data-w="344"  />
+		<p style="box-sizing: border-box; white-space: pre-line; margin-top: 13px; line-height: 22px; font-size: 13px; color: rgb(145, 145, 145);">图2-5  Torch提供的各种数据处理的库</p>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Torch的nn库支持神经网络、自编码器、线性回归、卷积网络、循环神经网络等，同时支持定制的损失函数及梯度计算。Torch因为使用了LuaJIT，因此用户在Lua中做数据预处理等操作可以随意使用循环等操作，而不必像在Python中那样担心性能问题，也不需要学习Python中各种加速运算的库。不过，Lua相比Python还不是那么主流，对大多数用户有学习成本。Torch在CPU上的计算会使用OpenMP、SSE进行优化，GPU上使用CUDA、cutorch、cunn、cuDNN进行优化，同时还有cuda-convnet的wrapper。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Torch有很多第三方的扩展可以支持RNN，使得Torch基本支持所有主流的网络。和Caffe类似的是，Torch也是主要基于Layer的连接来定义网络的。Torch中新的Layer依然需要用户自己实现，不过定义新Layer和定义网络的方式很相似，非常简便，不像Caffe那么麻烦，用户需要使用C++或者CUDA定义新Layer。同时，Torch属于命令式编程模式，不像Theano、TensorFlow属于声明性编程（计算图是预定义的静态的结构），所以用它实现某些复杂操作（比如beam search）比Theano和TensorFlow方便很多。</p><section class="h3" style="box-sizing: border-box; font-size: 16px;">
+		<span style="display: inline-block; height: 45px; line-height: 45px; color: rgb(8, 156, 187); background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvVvtq9IjdSQq6iapsXticdtKibyIusVhqI9Bjiawpf7xs13RPzYX7zf8g2Q/0?wx_fmt=jpeg&quot;); background-position: left center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 45px; padding-left: 30px; margin-top: 38px; margin-bottom: 10px;">Keras</span>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">官方网址：</strong>keras.io</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">GitHub：</strong>github.com/fchollet/keras</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Keras是一个崇尚极简、高度模块化的神经网络库，使用Python实现，并可以同时运行在TensorFlow和Theano上。它旨在让用户进行最快速的原型实验，让想法变为结果的这个过程最短。Theano和TensorFlow的计算图支持更通用的计算，而Keras则专精于深度学习。Theano和TensorFlow更像是深度学习领域的NumPy，而Keras则是这个领域的Scikit-learn。它提供了目前为止最方便的API，用户只需要将高级的模块拼在一起，就可以设计神经网络，它大大降低了编程开销（code overhead）和阅读别人代码时的理解开销（cognitive overhead）。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">它同时支持卷积网络和循环网络，支持级联的模型或任意的图结构的模型（可以让某些数据跳过某些Layer和后面的Layer对接，使得创建Inception等复杂网络变得容易），从CPU上计算切换到GPU加速无须任何代码的改动。因为底层使用Theano或TensorFlow，用Keras训练模型相比于前两者基本没有什么性能损耗（还可以享受前两者持续开发带来的性能提升），只是简化了编程的复杂度，节约了尝试新网络结构的时间。可以说模型越复杂，使用Keras的收益就越大，尤其是在高度依赖权值共享、多模型组合、多任务学习等模型上，Keras表现得非常突出。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Keras所有的模块都是简洁、易懂、完全可配置、可随意插拔的，并且基本上没有任何使用限制，神经网络、损失函数、优化器、初始化方法、激活函数和正则化等模块都是可以自由组合的。Keras也包括绝大部分state-of-the-art的Trick，包括Adam、RMSProp、Batch Normalization、PReLU、ELU、LeakyReLU等。同时，新的模块也很容易添加，这让Keras非常适合最前沿的研究。Keras中的模型也都是在Python中定义的，不像Caffe、CNTK等需要额外的文件来定义模型，这样就可以通过编程的方式调试模型结构和各种超参数。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">在Keras中，只需要几行代码就能实现一个MLP，或者十几行代码实现一个AlexNet，这在其他深度学习框架中基本是不可能完成的任务。Keras最大的问题可能是目前无法直接使用多GPU，所以对大规模的数据处理速度没有其他支持多GPU和分布式的框架快。Keras的编程模型设计和Torch很像，但是相比Torch，Keras构建在Python上，有一套完整的科学计算工具链，而Torch的编程语言Lua并没有这样一条科学计算工具链。无论从社区人数，还是活跃度来看，Keras目前的增长速度都已经远远超过了Torch。</p><section class="h3" style="box-sizing: border-box; font-size: 16px;">
+		<span style="display: inline-block; height: 45px; line-height: 45px; color: rgb(8, 156, 187); background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvVvtq9IjdSQq6iapsXticdtKibyIusVhqI9Bjiawpf7xs13RPzYX7zf8g2Q/0?wx_fmt=jpeg&quot;); background-position: left center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 45px; padding-left: 30px; margin-top: 38px; margin-bottom: 10px;">MXNet</span>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">官网网址：</strong>mxnet.io</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">GitHub：</strong>github.com/dmlc/mxnet</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">MXNet是DMLC（Distributed Machine Learning Community）开发的一款开源的、轻量级、可移植的、灵活的深度学习库，它让用户可以混合使用符号编程模式和指令式编程模式来最大化效率和灵活性，目前已经是AWS官方推荐的深度学习框架。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">MXNet的很多作者都是中国人，其最大的贡献组织为百度，同时很多作者来自cxxnet、minerva和purine2等深度学习项目，可谓博采众家之长。它是各个框架中率先支持多GPU和分布式的，同时其分布式性能也非常高。MXNet的核心是一个动态的依赖调度器，支持自动将计算任务并行化到多个GPU或分布式集群（支持AWS、Azure、Yarn等）。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">它上层的计算图优化算法可以让符号计算执行得非常快，而且节约内存，开启mirror模式会更加省内存，甚至可以在某些小内存GPU上训练其他框架因显存不够而训练不了的深度学习模型，也可以在移动设备（Android、iOS）上运行基于深度学习的图像识别等任务。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">此外，MXNet的一个很大的优点是支持非常多的语言封装，比如C++、Python、R、Julia、Scala、Go、MATLAB和JavaScript等，可谓非常全面，基本主流的脚本语言全部都支持了。在MXNet中构建一个网络需要的时间可能比Keras、Torch这类高度封装的框架要长，但是比直接用Theano等要快。MXNet的各级系统架构（下面为硬件及操作系统底层，逐层向上为越来越抽象的接口）如图2-6所示：</p><section class="image" style="box-sizing: border-box; padding: 14px 11px 16px; margin-top: 50px; margin-right: 8px; margin-left: 8px;">
+		<img data-src="http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvEoHpH7tpic7iankIEBNAyzxecn8iaS4iboo0lGfsKIICHXmagF76jTiavOg/0?wx_fmt=jpeg" style="width: 100%;" data-type="jpeg" data-ratio="0.7318007662835249" data-w="261"  />
+		<p style="box-sizing: border-box; white-space: pre-line; margin-top: 13px; line-height: 22px; font-size: 13px; color: rgb(145, 145, 145);">图2-6  MXNet系统架构</p>
+	</section><section class="h3" style="box-sizing: border-box; font-size: 16px;">
+		<span style="display: inline-block; height: 45px; line-height: 45px; color: rgb(8, 156, 187); background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvVvtq9IjdSQq6iapsXticdtKibyIusVhqI9Bjiawpf7xs13RPzYX7zf8g2Q/0?wx_fmt=jpeg&quot;); background-position: left center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 45px; padding-left: 30px; margin-top: 38px; margin-bottom: 10px;">CNTK</span>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">官方网址：</strong>cntk.ai</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">GitHub：</strong>github.com/Microsoft/CNTK</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">CNTK（Computational Network Toolkit）是微软研究院（MSR）开源的深度学习框架。它最早由start the deep learning craze的演讲人创建，目前已经发展成一个通用的、跨平台的深度学习系统，在语音识别领域的使用尤其广泛。CNTK通过一个有向图将神经网络描述为一系列的运算操作，这个有向图中子节点代表输入或网络参数，其他节点代表各种矩阵运算。CNTK支持各种前馈网络，包括MLP、CNN、RNN、LSTM、Sequence-to-Sequence模型等，也支持自动求解梯度。CNTK有丰富的细粒度的神经网络组件，使得用户不需要写底层的C++或CUDA，就能通过组合这些组件设计新的复杂的Layer。CNTK拥有产品级的代码质量，支持多机、多GPU的分布式训练。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">CNTK设计是性能导向的，在CPU、单GPU、多GPU，以及GPU集群上都有非常优异的表现。同时微软最近推出的1-bit compression技术大大降低了通信代价，让大规模并行训练拥有了很高的效率。CNTK同时宣称拥有很高的灵活度，它和Caffe一样通过配置文件定义网络结构，再通过命令行程序执行训练，支持构建任意的计算图，支持AdaGrad、RmsProp等优化方法。它的另一个重要特性就是拓展性，CNTK除了内置的大量运算核，还允许用户定义他们自己的计算节点，支持高度的定制化。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">CNTK在2016年9月发布了对强化学习的支持，同时，除了通过写配置文件的方式定义网络结构，CNTK还将支持其他语言的绑定，包括Python、C++和C#，这样用户就可以用编程的方式设计网络结构。CNTK与Caffe一样也基于C++并且跨平台，大部分情况下，它的部署非常简单。PC上支持Linux、Mac和Windows，但是它目前不支持ARM架构，限制了其在移动设备上的发挥。图2-7所示为CNTK目前的总体架构图。</p><section class="image" style="box-sizing: border-box; padding: 14px 11px 16px; margin-top: 50px; margin-right: 8px; margin-left: 8px;">
+		<img data-src="http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvw0LaASe9QJ1mPnicStPWkW89pVNv99k19p6NjrFuD2DVvBvuibGk6x5A/0?wx_fmt=jpeg" style="width: 100%;" data-type="jpeg" data-ratio="0.5144230769230769" data-w="416"  />
+		<p style="box-sizing: border-box; white-space: pre-line; margin-top: 13px; line-height: 22px; font-size: 13px; color: rgb(145, 145, 145);">图2-7  CNTK的总体架构图</p>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">CNTK原生支持多GPU和分布式，从官网公布的对比评测来看，性能非常不错。在多GPU方面，CNTK相对于其他的深度学习库表现得更突出，它实现了1-bit SGD和自适应的mini-batching。图2-8所示为CNTK官网公布的在2015年12月的各个框架的性能对比。在当时，CNTK是唯一支持单机8块GPU的框架，并且在分布式系统中可以超越8块GPU的性能。</p><section class="image" style="box-sizing: border-box; padding: 14px 11px 16px; margin-top: 50px; margin-right: 8px; margin-left: 8px;">
+		<img data-src="http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvy9KgyMMyEnAWfZoLBZVPjsW0uvVe0IQLUsTrSEibm5lplsXApk94wug/0?wx_fmt=jpeg" style="width: 100%;" data-type="jpeg" data-ratio="0.65875" data-w="800"  />
+		<p style="box-sizing: border-box; white-space: pre-line; margin-top: 13px; line-height: 22px; font-size: 13px; color: rgb(145, 145, 145);">图2-8  CNTK与各个框架的性能对比</p>
+	</section><section class="h3" style="box-sizing: border-box; font-size: 16px;">
+		<span style="display: inline-block; height: 45px; line-height: 45px; color: rgb(8, 156, 187); background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvVvtq9IjdSQq6iapsXticdtKibyIusVhqI9Bjiawpf7xs13RPzYX7zf8g2Q/0?wx_fmt=jpeg&quot;); background-position: left center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 45px; padding-left: 30px; margin-top: 38px; margin-bottom: 10px;">Deeplearning4J</span>
+	</section><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">官方网址：</strong><a style="color: #00b38b; word-break: break-all;">http://deeplearning4j.org/</a></p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);"><strong style="text-align: left;">GitHub:</strong> github.com/deeplearning4j/deeplearning4j</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">Deeplearning4J（简称DL4J）是一个基于Java和Scala的开源的分布式深度学习库，由Skymind于2014年6月发布，其核心目标是创建一个即插即用的解决方案原型。埃森哲、雪弗兰、博斯咨询和IBM等都是DL4J的客户。DL4J拥有一个多用途的n-dimensional array的类，可以方便地对数据进行各种操作；拥有多种后端计算核心，用以支持CPU及GPU加速，在图像识别等训练任务上的性能与Caffe相当；可以与Hadoop及Spark自动整合，同时可以方便地在现有集群（包括但不限于AWS，Azure等）上进行扩展，同时DL4J的并行化是根据集群的节点和连接自动优化，不像其他深度学习库那样可能需要用户手动调整。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-top: 23px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74);">DL4J选择Java作为其主要语言的原因是，目前基于Java的分布式计算、云计算、大数据的生态非常庞大。用户可能拥有大量的基于Hadoop和Spark的集群，因此在这类集群上搭建深度学习平台的需求便很容易被DL4J满足。同时JVM的生态圈内还有数不胜数的Library的支持，而DL4J也创建了ND4J，可以说是JVM中的NumPy，支持大规模的矩阵运算。此外，DL4J还有商业版的支持，付费用户在出现问题时可以通过电话咨询寻求支持。</p><section class="author" style="box-sizing: border-box;">
+		<h5 style="height: 51px; line-height: 52px; font-size: 18px; color: rgb(0, 179, 139); background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvjx4bVwRMas9IYDkImJpDwqrGRCqALK5Qc29jGFibNO8CG5IYvDn0TzQ/0?wx_fmt=jpeg&quot;); background-position: center center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 51px; margin-top: 38px;"><span style="display: inline-block; height: 51px; width: 37%; float: left; background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXv9a4O7vheNicUS9nNSmNGd14KniaSa0xy3vu2UeFNAkUxnvZP7Ws9TKPw/0?wx_fmt=jpeg&quot;); background-position: center center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 100%;"></span>作者介绍<span style="display: inline-block; height: 51px; width: 37%; float: right; background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvdjAxsicKAHLHd13TAg1ib6JxtG5ZHbl8ZjI6jdH9b3ZS9dVbvZa2FKTA/0?wx_fmt=jpeg&quot;); background-position: center center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 100%;"></span></h5>
+		
+		<p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74); padding-top: 25px;"><strong><span class="emphasis" style="text-align: left; color: rgb(0, 179, 138);">黄文坚</span></strong>，PPmoney大数据算法总监，负责集团的风控、理财、互联网证券等业务的数据挖掘工作。Google TensorFlow Contributor。前明略数据技术合伙人，领导了对诸多大型银行、保险公司、基金的数据挖掘项目，包括建立金融风控模型、新闻舆情分析、保险复购预测等。曾就职于阿里巴巴搜索引擎算法团队，负责天猫个性化搜索系统。曾参加阿里巴巴大数据推荐算法大赛，于7000多支队伍中获得前10名。</p><p style="box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px; padding-right: 8px; padding-left: 8px; color: rgb(74, 74, 74); padding-top: 25px;"><strong><span class="emphasis" style="text-align: left; color: rgb(0, 179, 138);">唐源</span></strong>，目前在芝加哥的Uptake公司带领团队建立用于多个物联网领域的数据科学引擎进行条件和健康监控，也建立了公司的预测模型引擎，现在被用于航空、能源等大型机械领域。一直活跃在开源软件社区，是TensorFlow和DMLC的成员，是TensorFlow、XGBoost、MXNet等软件的committer，TF.Learn、ggfortify等软件的作者，以及caret、pandas等软件的贡献者。</p>
+	</section><section class="copyright" style="box-sizing: border-box; margin-top: 50px; margin-right: 8px; margin-left: 8px; border-width: 1px; border-style: solid; border-color: rgb(0, 179, 139);">
+		<section style="box-sizing: border-box; line-height: 1em;"><img data-src="http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvutibOjOfbcYvZydLLcmdyRcuylMwWNEmTPOyfdm1qysPtmicaaKdz1OQ/0?wx_fmt=jpeg" style="width: 33px; margin-top: -18px; display: inline-block;" width="33" data-type="jpeg" data-ratio="0.9402985074626866" data-w="67"  /></section>
+		<p style=" box-sizing: border-box; font-size: 16px; text-align: justify; white-space: pre-line; line-height: 27px;  padding: 14px 15px; border-radius: 4px; ">本文系InfoQ旗下公众号「大数据杂谈」原创文章，已经授权InfoQ公众号转发传播。</p>
+	</section><section class="recommend" style="box-sizing: border-box; padding-top: 19px;">
+		<h5 style="height: 51px; line-height: 52px; font-size: 18px; color: rgb(0, 179, 139); background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvjx4bVwRMas9IYDkImJpDwqrGRCqALK5Qc29jGFibNO8CG5IYvDn0TzQ/0?wx_fmt=jpeg&quot;); background-position: center center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 51px; margin-top: 38px;"><span style="display: inline-block; height: 51px; width: 37%; float: left; background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXv9a4O7vheNicUS9nNSmNGd14KniaSa0xy3vu2UeFNAkUxnvZP7Ws9TKPw/0?wx_fmt=jpeg&quot;); background-position: center center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 100%;"></span>今日荐文<span style="display: inline-block; height: 51px; width: 37%; float: right; background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvdjAxsicKAHLHd13TAg1ib6JxtG5ZHbl8ZjI6jdH9b3ZS9dVbvZa2FKTA/0?wx_fmt=jpeg&quot;); background-position: center center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 100%;"></span></h5>
+		<p style="box-sizing: border-box; white-space: pre-line; line-height: 27px; font-size: 15px; color: rgb(200, 199, 199); padding-top: 28px; padding-bottom: 28px;">点击下方图片即可阅读</p>
+			<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2650995565&amp;idx=1&amp;sn=b196260d0121939791fa3c6038904ee3&amp;chksm=bdbf033e8ac88a280283f9c6b3befa45c3619d0597656ab91073d16ed922f7b4503fa3a59a3c&amp;scene=21#wechat_redirect" target="_blank" data_ue_src="http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2650995565&amp;idx=1&amp;sn=b196260d0121939791fa3c6038904ee3&amp;chksm=bdbf033e8ac88a280283f9c6b3befa45c3619d0597656ab91073d16ed922f7b4503fa3a59a3c&amp;scene=21#wechat_redirect"><img data-src="http://mmbiz.qpic.cn/mmbiz_png/YriaiaJPb26VO9b45rYergV9VNqq44hUXvZGPZAdxia16IKzHib3XLBKhYbqEy4qricC0mrdfAWpOXNJW5uMdia3DFIw/0?wx_fmt=png" style="width: 100%; color: inherit; float: left;" data-type="png" data-ratio="0.5553691275167785" data-w="596"  /></a>
+		<section class="recommend-bottom-title" style="text-align: left; width: 100%; margin-top: -3em; margin-bottom: 29px; float: left; box-sizing: border-box; background-color: rgba(13, 14, 28, 0.8); max-width: 640px;">
+			<section style="text-align: center; color: inherit; box-sizing: border-box;">
+				<p style="font-size: 16px; line-height: 27px; text-align: left; color: rgb(255, 255, 255); box-sizing: border-box; white-space: normal; padding-top: 8px; padding-bottom: 8px; padding-left: 13px;"><span style="display: inline-block; width: 22px; height: 18px; background: url(&quot;http://mmbiz.qpic.cn/mmbiz_png/YriaiaJPb26VO9b45rYergV9VNqq44hUXvicsBjTgjP0rxBBDSVDx3ZPE46NpBAGVwFICLktn55jVX1INfqacTEXg/0?wx_fmt=png&quot;) center center / 100% 100% no-repeat; vertical-align: middle; margin-right: 8px;"></span>
+					没想到，你是这样的女程序员				</p>
+			</section>
+		</section>
+		<hr style="width: 100%; height: 1px; border-top-style: dotted; border-top-color: rgb(165, 165, 165);"  />
+	</section><section class="ad" style="box-sizing: border-box; width: 100%; text-align: left;">
+		
+		<img data-src="http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvn5qt1s7RgFxTLtunzKAMCaVYcCCKnkIsSKrqSdC58K4ojqyNgQHZ8A/0?wx_fmt=jpeg" style="width: 100%; padding-right: 8px; padding-left: 8px; margin-top: 28px; margin-right: auto; margin-left: auto;" data-type="jpeg" data-ratio="0.555" data-w="800"  /></section></section>
+                </div>
+                <script nonce="1799824546" type="text/javascript">
+                    var first_sceen__time = (+new Date());
+
+                    if ("" == 1 && document.getElementById('js_content')) {
+                        document.getElementById('js_content').addEventListener("selectstart",function(e){ e.preventDefault(); });
+                    }
+
+                    
+                    (function(){
+                        if (navigator.userAgent.indexOf("WindowsWechat") != -1){
+                            var link = document.createElement('link');
+                            var head = document.getElementsByTagName('head')[0];
+                            link.rel = 'stylesheet';
+                            link.type = 'text/css';
+                            link.href = "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg_new/winwx435ee6.css";
+                            head.appendChild(link);
+                        }
+                    })();
+                </script>
+
+                
+                <div class="ct_mpda_wrp" id="js_sponsor_ad_area" style="display:none;"></div>
+                
+                
+                <div class="read-more__area" id="js_more_read_area" style="display:none;">
+                    
+                </div>
+
+                
+                                <div class="reward_area tc reward_area_primary" id="js_preview_reward_author" style="display:none;">
+                    <div class="reward-avatar" style="display: none;" id="js_preview_reward_author_avatar">
+                        <img src="" alt="" id="js_preview_reward_author_head">
+                    </div>
+                    
+                                        <div class="reward-author" id="js_preview_reward_author_name">黄文坚 唐源</div>
+                                        <p class="reward_tips" id="js_preview_reward_author_wording" style="display:none;"></p>
+                    <p>
+                        <a class="reward_button" id='js_preview_reward_author_link' href="##"><span id="js_preview_reward_link_text">赞赏</span></a>
+                    </p>
+                </div>
+
+                <div class="reward_qrcode_area reward_area tc" id="js_preview_reward_qrcode" style="display:none;">
+                    <p class="tips_global">长按二维码向我转账</p>
+                    <p id="js_preview_reward_ios_wording" class="reward_tips" style="display:none;"></p>
+                    <span class="reward_qrcode_img_wrp"><img class="reward_qrcode_img" src="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/pic/appmsg/pic_reward_qrcode.2x42f400.png"></span>
+                    <p class="tips_global">受苹果公司新规定影响，微信 iOS 版的赞赏功能被关闭，可通过二维码转账支持公众号。</p>
+                </div>
+                                
+                
+                            </div>
+                                    
+                        
+
+
+                        
+            <ul id="js_hotspot_area" class="article_extend_area"></ul>
+
+
+            
+
+            
+
+
+<div class="rich_media_tool" id="js_toobar3">
+
+        <div id="js_read_area3" class="media_tool_meta tips_global_primary meta_primary" style="display:none;">阅读 <span id="readNum3"></span></div>
+
+    <span style="display:none;" class="media_tool_meta meta_extra meta_praise" id="like_old">
+        <i class="icon_praise_gray"></i><span class="praise_num" id="likeNum_old"></span>
+    </span>
+
+    <span style="display:none;" class="media_tool_meta meta_extra meta_like" id="like3">
+        <button class="like_btn" id="js_like_btn"> 
+          好看<span class="like_num" id="likeNum3"></span>
+        </button>
+    </span>
+
+    <div id="js_like_educate" style="display:none">
+        <div class="weui-mask"></div>
+        <div class="weui-dialog weui-dialog_haokan">
+        <div class="weui-dialog__hd"><strong class="weui-dialog__title" id="educate_title">已推荐到看一看</strong></div>
+        <div class="weui-dialog__bd">
+          <img class="pic_haokan" src="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/pic/appmsg/pic_haokan42f400.png">
+            你的朋友可以在“发现”-“看一看”看到你认为好看的文章。        </div>
+        <div class="weui-dialog__ft" id="educate_btn" style="display: none">
+          <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default" id="js_cancel">取消</a>
+          <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="js_confirm">推荐</a>
+        </div>
+        <div class="weui-dialog__ft" id="educate_btn2" style="display: none">
+          <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="js_acknowledge">我知道了</a>
+        </div>
+        </div>
+    </div>
+
+    <div id="js_unlike_educate" style="display:none">
+        <div class="weui-mask"></div>
+        <div class="weui-dialog">
+        
+        <div class="weui-dialog__bd">
+            已取消，“好看”想法已同步删除        </div>
+        <div class="weui-dialog__ft">
+          <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="js_unlike_know">知道了</a>
+        </div>
+        </div>
+    </div>
+
+    
+    </div>
+
+
+<div class="like_comment_wrp" id="js_a_like_comment" style="display: none;">
+  <div class="like_comment_inner">
+    <div class="like_comment_hd" style="display:none" id="js_like_title"></div>
+    <div class="like_comment_bd">
+      <div class="tips_global_primary like_comment_tips">
+        <i class="weui-icon-success"></i>已推荐到看一看<a href="javascript:;" class="like_comment_share_link" id="js_a_like_comment_share">和朋友分享想法</a>
+      </div>
+    </div>
+    <div class="like_comment_ft">
+      <span id="js_a_like_comment_msg" class="like_comment_msg" style="visibility:hidden">最多200字，当前共<span id="js_a_like_current_cnt"></span>字</span>
+      <button class="like_comment_btn" disabled="disabled" id="js_a_like_confirm">发送</button>
+    </div>
+  </div>
+</div>
+
+<div id="js_like_toast" style="display: none;">
+  <div class="weui-mask_transparent"></div>
+  <div class="weui-toast">
+    <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+    <p class="weui-toast__content" id="js_toast_msg">已发送</p>
+  </div>
+</div>
+
+
+<div style="display: none;" id="js_b_comment_panel" class="like_comment_primary_pop">
+  <div class="like_comment_primary_wrp" id="js_b_wrp">
+    <div class="like_comment_primary_inner">
+      <div class="like_comment_primary_hd">
+        <h4 class="like_comment_primary_title">
+          朋友将在看一看看到        </h4>
+        <button id="js_b_like_confirm" class="like_comment_primary_btn">确定</button>
+      </div>
+      <div id='js_b_comment_text_first' class="like_comment_primary_bd">
+        <span class="tips_global_primary">
+          分享你的想法...        </span>
+      </div>
+    </div>
+  </div>
+  <div class="like_comment_primary_mask" id="js_mask_1"></div>
+</div>
+
+<div style="display: none;" id="js_b_comment_final">
+  <div class="like_comment_primary_wrp editing" id="js_comment_wrp">
+    <div class="like_comment_primary_inner">
+      <div class="like_comment_primary_hd">
+        <button class="like_comment_primary_cancel" id="js_b_comment_cancel">取消</button>
+        <h4 class="like_comment_primary_title"> 分享想法到看一看 </h4>
+        <button class="like_comment_primary_btn" id="js_b_comment_confirm">确定</button>
+      </div>
+      <div class="like_comment_primary_bd">
+        <textarea class="like_comment_textarea weui-textarea" placeholder="分享你的想法..." id="js_b_comment_text_second"></textarea>
+      </div>
+      <span class="like_comment_msg" id="js_b_like_comment_msg" style="visibility: hidden;">最多200字，当前共<span id="js_b_like_current_cnt"></span>字</span>
+    </div>
+  </div>
+  <div class="like_comment_primary_mask" id="js_mask_2"></div>
+</div>
+
+<div id="js_loading" style=" display: none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui-loading weui-icon_toast"></i>
+        <p class="weui-toast__content">发送中</p>
+    </div>
+</div>
+
+<div id="js_fail" style="display:none">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+    <div class="weui-dialog__bd">
+        网络异常，请稍后重试    </div>
+    <div class="weui-dialog__ft">
+      <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="js_fail_inform">知道了</a>
+    </div>
+    </div>
+</div>
+
+
+
+                        <div class="rich_media_tool" id="js_sg_bar">
+
+                                
+            </div>
+                      </div>
+        </div>
+
+        <div class="rich_media_area_primary sougou" id="sg_tj" style="display:none"></div>
+
+
+        
+        <div class="rich_media_area_extra">
+          <div class="rich_media_area_extra_inner">
+              
+              <div id="js_share_appmsg">
+              </div>
+
+              
+                            <div class="mpda_bottom_container" id="js_bottom_ad_area"></div>
+                            
+              <div id="js_iframetest" style="display:none;"></div>
+                            
+                            
+              <div class="rich_media_extra rich_media_extra_discuss" id="js_cmt_container" style="display:none">
+                
+
+                
+                <div class="discuss_mod" id="js_friend_cmt_area" style="display:none">
+                  
+                  
+                  
+                </div>
+
+                                <div class="discuss_mod" id="js_cmt_area" style="display:none">
+                </div>
+                              </div>
+          </div>
+        </div>
+
+        
+        <div id="js_pc_qr_code" class="qr_code_pc_outer" style="display:none;">
+            <div class="qr_code_pc_inner">
+                <div class="qr_code_pc">
+                    <img id="js_pc_qr_code_img" class="qr_code_pc_img">
+                    <p>微信扫一扫<br>关注该公众号</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="js_pc_weapp_code" class="weui-desktop-popover weui-desktop-popover_pos-up-center weui-desktop-popover_img-text" style="display: none;">
+    <div class="weui-desktop-popover__content">
+        <div class="weui-desktop-popover__desc">
+            <img id="js_pc_weapp_code_img">
+            微信扫一扫<br>使用小程序<span id="js_pc_weapp_code_des"></span>        </div>
+    </div>
+</div>
+<div id="js_minipro_dialog" style="display:none;">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+        <div class="weui-dialog__bd">即将打开"<span id="js_minipro_dialog_name"></span>"小程序</div>
+        <div class="weui-dialog__ft">
+            <a id="js_minipro_dialog_cancel" href="javascript:void(0);" class="weui-dialog__btn weui-dialog__btn_default">取消</a>
+            <a id="js_minipro_dialog_ok" href="javascript:void(0);" class="weui-dialog__btn weui-dialog__btn_primary">打开</a>
+        </div>
+    </div>
+</div>
+
+        
+        <script nonce="1799824546">
+    var __DEBUGINFO = {
+        debug_js : "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/debug/console42f400.js",
+        safe_js : "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/safe/moonsafe42f400.js",
+        res_list: []
+    };
+</script>
+
+<script nonce="1799824546" type="text/javascript">
+(function() {
+	var totalCount = 0,
+			finishCount = 0;
+
+	function _loadVConsolePlugin() {
+		window.vConsole = new window.VConsole();
+		while (window.vConsolePlugins.length > 0) {
+			var p = window.vConsolePlugins.shift();
+			window.vConsole.addPlugin(p);
+		}
+	}
+	
+	function _addVConsole(uri, cb) {
+		totalCount++;
+		var node = document.createElement('SCRIPT');
+		node.type = 'text/javascript';
+		node.src = uri;
+		node.setAttribute('nonce', '1799824546');
+		if (cb) {
+			node.onload = cb;
+		}
+		document.getElementsByTagName('head')[0].appendChild(node);
+	}
+	if (
+		(document.cookie && document.cookie.indexOf('vconsole_open=1') > -1)
+		|| location.href.indexOf('vconsole=1') > -1
+	) {
+		window.vConsolePlugins = [];
+		_addVConsole('//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.2.2/vconsole.min43429b.js', function() {
+			
+			_addVConsole('//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/plugin/vconsole-mpopt/1.0.1/vconsole-mpopt42f400.js', _loadVConsolePlugin);
+		});
+	}
+})();
+</script>
+        
+<script nonce="1799824546" type="text/javascript">
+if (location.href.match(/fontScale=\d+/) && /(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+
+    var m=location.href.match(/fontScale=(\d*)/);
+    var map={
+        "94":1,
+        "100":2,
+        "109":3,
+        "119":4,
+        "131":5,
+    }
+    if(m&&m[1]&&map[m[1]]){
+        document.getElementsByTagName("body")[0].className+=" appmsg_skin_fontscale_"+map[m[1]];
+        console.log("appmsg_skin_fontscale_:"+map[m[1]]);
+    }
+}
+
+
+(function(){
+    if (window.__second_open__) return; 
+
+    
+
+    var first_js_time = +new Date();
+
+    var showDate="";
+    var svrDate=new Date("1548493183"*1000);
+    var createDate=new Date("1489103997"*1000);
+    var ct="1489103997"*1;
+    var publish_time = "2017-03-10" || "";
+    var cD={
+      year:createDate.getYear(),
+      month:createDate.getMonth()+1,
+      date:createDate.getDate()
+    };
+    
+    svrDate.setHours(0);
+    svrDate.setMinutes(0);
+    svrDate.setSeconds(0);
+    var todayDate=svrDate.getTime()/1000;
+    svrDate.setDate(1);
+    svrDate.setMonth(0);
+    var yearDate=svrDate.getTime()/1000;
+    
+    if(ct>=todayDate){
+      showDate="今天";
+    
+    }else if(ct>=todayDate-60*60*24){
+       showDate="昨天";
+    
+    }else if(ct>=todayDate-2*60*60*24){
+      showDate="前天";
+    }else if(ct>=todayDate-3*60*60*24){
+      showDate="3天前";
+    }else if(ct>=todayDate-4*60*60*24){
+      showDate="4天前";
+    }else if(ct>=todayDate-5*60*60*24){
+      showDate="5天前";
+    }else if(ct>=todayDate-6*60*60*24){
+      showDate="6天前";
+    }else if(ct>=todayDate-2*7*60*60*24){
+      showDate="1周前";
+    }else if(ct>=yearDate){
+      var tmp = publish_time.split('-');
+      showDate = parseInt(tmp[1]) + '月' + parseInt(tmp[2]) + '日';
+      
+      
+      
+    }else{
+      showDate=publish_time;
+    };
+    if(document.getElementById("publish_time")){
+      document.getElementById("publish_time").innerText=showDate;
+    }
+})();
+</script>
+<script nonce="1799824546" type="text/javascript">
+
+if (!window.console) window.console = { log: function() {} };
+
+if (typeof getComputedStyle == 'undefined') {
+    if (document.body.currentStyle) {
+        window.getComputedStyle = function(el) {
+            return el.currentStyle;
+        }
+    } else {
+        window.getComputedStyle = {};
+    }
+}
+(function(){
+    window.__zoom = 1;
+    
+    (function(){
+        var validArr = ","+([0.875, 1, 1.125, 1.25, 1.375]).join(",")+",";
+        var match = window.location.href.match(/winzoom=(\d+(?:\.\d+)?)/);
+        if (match && match[1]) {
+            var winzoom = parseFloat(match[1]);
+            if (validArr.indexOf(","+winzoom+",")>=0) {
+                window.__zoom = winzoom;
+            }
+        }
+    })();
+
+    var ua = navigator.userAgent.toLowerCase();
+    var re = new RegExp("msie ([0-9]+[\.0-9]*)");
+    var version;
+    if (re.exec(ua) != null) {
+        version = parseInt(RegExp.$1);
+    }
+    var isIE = false;
+    if (typeof version != 'undefined' && version >= 6 && version <= 9) {
+        isIE = true;
+    }
+    var getMaxWith=function(){
+        var container = document.getElementById('img-content');
+        var max_width = container.offsetWidth;
+        var container_padding = 0;
+        var container_style = getComputedStyle(container);
+        container_padding = parseFloat(container_style.paddingLeft) + parseFloat(container_style.paddingRight);
+        max_width -= container_padding;
+        if (!max_width) {
+            max_width = window.innerWidth - 30;      
+        }
+        return max_width;
+    };
+    var getParentWidth = function(dom){
+        var parent_width = 0;
+        var parent = dom.parentNode;
+        var outerWidth = 0;
+        while (true) {
+            if(!parent||parent.nodeType!=1) break;
+            var parent_style = getComputedStyle(parent);
+            if (!parent_style) break;
+            parent_width = parent.clientWidth - parseFloat(parent_style.paddingLeft) - parseFloat(parent_style.paddingRight) - outerWidth;
+            if (parent_width > 0) break;
+            outerWidth += parseFloat(parent_style.paddingLeft) + parseFloat(parent_style.paddingRight) + parseFloat(parent_style.marginLeft) + parseFloat(parent_style.marginRight) + parseFloat(parent_style.borderLeftWidth) + parseFloat(parent_style.borderRightWidth);
+            parent = parent.parentNode;
+        }
+        return parent_width;
+    }
+    var getOuterW=function(dom){
+        var style=getComputedStyle(dom),
+            w=0;
+        if(!!style){
+            w = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight) + parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth);
+        }
+        return w;
+    };
+    var getOuterH =function(dom){
+        var style=getComputedStyle(dom),
+            h=0;
+        if(!!style){
+            h = parseFloat(style.paddingTop) + parseFloat(style.paddingBottom) + parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
+        }
+        return h;
+    };
+    var insertAfter = function(dom,afterDom){
+        var _p = afterDom.parentNode;
+        if(!_p){
+            return;
+        }
+        if(_p.lastChild === afterDom){
+            _p.appendChild(dom);
+        }else{
+            _p.insertBefore(dom,afterDom.nextSibling);
+        }
+    };
+    var getQuery = function(name,url){
+        
+        var u  = arguments[1] || window.location.search,
+            reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"),
+            r = u.substr(u.indexOf("\?")+1).match(reg);
+        return r!=null?r[2]:"";
+    };
+
+    
+    function setImgSize(item, widthNum, widthUnit, ratio, breakParentWidth) {
+        setTimeout(function () {
+            var img_padding_border = getOuterW(item) || 0;
+            var img_padding_border_top_bottom = getOuterH(item) || 0;
+            
+            if (widthNum > getParentWidth(item) && !breakParentWidth) {
+                widthNum = getParentWidth(item);
+            }
+
+            height = (widthNum - img_padding_border) * ratio + img_padding_border_top_bottom;
+
+            if (isIE) {
+                var url = item.getAttribute('data-src');
+                item.src = url;
+            } else {
+                if(parseFloat(widthNum, 10) > 40 && height > 40 && breakParentWidth) {
+                    item.className += ' img_loading';
+                }
+                item.src = "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==";
+            }
+            item.style.cssText += ";width: " + widthNum + widthUnit + " !important;";
+            item.style.cssText += ";height: " + height + widthUnit + " !important;";
+        }, 10);
+    }
+
+    (function(){
+        var images = document.getElementsByTagName('img');
+        var length = images.length;
+        var max_width = getMaxWith();
+        for (var i = 0; i < length; ++i) {
+            if (window.__second_open__ && images[i].getAttribute('__sec_open_place_holder__')) {
+                continue;
+            }
+            var imageItem = images[i];
+            var src_ = imageItem.getAttribute('data-src');
+            var realSrc = imageItem.getAttribute('src');
+            if (!src_ || realSrc) continue;
+            
+            var originWidth = imageItem.getAttribute('data-w');
+            var ratio_ = 1 * imageItem.getAttribute('data-ratio');
+
+            var height = 100;
+            if (ratio_ && ratio_ > 0) {
+                var parent_width = getParentWidth(imageItem) || max_width;
+                var initWidth = imageItem.style.width || imageItem.getAttribute('width') || originWidth || parent_width;
+                initWidth = parseFloat(initWidth, 10) > max_width ? max_width : initWidth;
+                
+                if (initWidth) {
+                    imageItem.setAttribute('_width', !isNaN(initWidth * 1) ? initWidth + 'px' : initWidth);
+                }
+                
+                if (typeof initWidth === 'string' && initWidth.indexOf('%') !== -1) {
+                    initWidth = parseFloat(initWidth.replace('%', ''), 10) / 100 * parent_width;
+                }
+                
+                if (initWidth === 'auto') {
+                    initWidth = originWidth;
+                }
+
+                var res = /^(\d+(?:\.\d+)?)([a-zA-Z%]+)?$/.exec(initWidth);
+                var widthNum = res && res.length >= 2 ? res[1] : 0;
+                var widthUnit = res && res.length >= 3 && res[2] ? res[2] : 'px';
+
+                
+                setImgSize(imageItem, widthNum, widthUnit, ratio_, true);
+                
+                (function (item, widthNumber, unit, ratio) {
+                    setTimeout(function () {
+                        setImgSize(item, widthNumber, unit, ratio, false);
+                    });
+                })(imageItem, widthNum, widthUnit, ratio_);
+            } else {
+                imageItem.style.cssText += ";visibility: hidden !important;";
+            }
+
+        }
+    })();
+    window.__videoDefaultRatio=16/9;
+    window.__getVideoWh = function(dom){
+        var max_width = getMaxWith(),
+            width = max_width,
+            ratio_ = dom.getAttribute('data-ratio')*1,
+            arr = [4/3, 16/9],
+            ret = arr[0],
+            abs = Math.abs(ret - ratio_);
+        if (!ratio_) { 
+            if (dom.getAttribute("data-mpvid")) { 
+                ratio_ = 16/9;
+            } else { 
+                ratio_ = 4/3;
+            }
+        } else { 
+            for (var j = 1, jl = arr.length; j < jl; j++) {
+                var _abs = Math.abs(arr[j] - ratio_);
+                if (_abs < abs) {
+                    abs = _abs;
+                    ret = arr[j];
+                }
+            }
+            ratio_ = ret;
+        }
+        
+        var parent_width = getParentWidth(dom)||max_width,
+            width = width > parent_width ? parent_width : width,
+            outerW = getOuterW(dom)||0,
+            outerH = getOuterH(dom)||0,
+            videoW = width - outerW,
+            videoH = videoW/ratio_,
+            height = videoH + outerH;
+        return {w:Math.ceil(width),h:Math.ceil(height),vh:videoH,vw:videoW,ratio:ratio_};
+    };
+
+
+    (function(){
+        var iframe = document.getElementsByTagName('iframe');
+        for (var i=0,il=iframe.length;i<il;i++) {
+            if (window.__second_open__ && iframe[i].getAttribute('__sec_open_place_holder__')) {
+                continue;
+            }
+            var a = iframe[i];
+            var src_ = a.getAttribute('src')||a.getAttribute('data-src')||"";
+            if(!/^http(s)*\:\/\/v\.qq\.com\/iframe\/(preview|player)\.html\?/.test(src_)
+                && !/^http(s)*\:\/\/mp\.weixin\.qq\.com\/mp\/readtemplate\?t=pages\/video_player_tmpl/.test(src_)
+            ){
+                continue;
+            }
+            var vid = getQuery("vid",src_);
+            if(!vid){
+                continue;
+            }
+            vid=vid.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,"");
+            a.removeAttribute('src');
+            a.style.display = "none";
+            var obj = window.__getVideoWh(a),
+                videoPlaceHolderSpan = document.createElement('span'),
+                videoPlayerIconSpan = document.createElement('span'),
+                mydiv = document.createElement('img');
+
+            videoPlaceHolderSpan.className = "js_img_loading db";
+            videoPlaceHolderSpan.setAttribute("data-vid", vid);
+            
+
+            videoPlayerIconSpan.className = 'wx_video_context db'; 
+            videoPlayerIconSpan.style.display = 'none';
+            videoPlayerIconSpan.innerHTML = '<span class="wx_video_thumb_primary"></span><button class="wx_video_play_btn">播放</button><span class="wx_video_mask"></span>'; 
+
+            mydiv.className = "img_loading";
+
+            mydiv.src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==";
+            
+            
+            videoPlaceHolderSpan.style.cssText = "width: " + obj.w + "px !important;";
+            mydiv.style.cssText += ";width: " + obj.w + "px";
+            videoPlaceHolderSpan.appendChild(videoPlayerIconSpan);
+            videoPlaceHolderSpan.appendChild(mydiv);
+            insertAfter(videoPlaceHolderSpan, a); 
+            
+            a.style.cssText += ";width: " + obj.w + "px !important;";
+            a.setAttribute("width",obj.w);
+            if(window.__zoom!=1){
+                a.style.display = "block";
+                videoPlaceHolderSpan.style.display = "none";
+                a.setAttribute("_ratio",obj.ratio);
+                a.setAttribute("_vid",vid);
+            }else{
+                videoPlaceHolderSpan.style.cssText += "height: " + obj.h + "px !important;";
+                mydiv.style.cssText += "height: " + obj.h + "px !important;";
+                a.style.cssText += "height: " + obj.h + "px !important;";
+                a.setAttribute("height",obj.h);
+            }
+            a.setAttribute("data-vh",obj.vh);
+            a.setAttribute("data-vw",obj.vw);
+            if(a.getAttribute("data-mpvid")){
+                a.setAttribute("data-src",location.protocol+"//mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&auto=0&vid="+vid);
+            }else{
+                a.setAttribute("data-src",location.protocol+"//v.qq.com/iframe/player.html?vid="+ vid + "&width="+obj.vw+"&height="+obj.vh+"&auto=0");   
+            }            
+        }
+    })();
+    
+    (function(){
+        if(window.__zoom!=1){
+            if (!window.__second_open__) {
+                document.getElementById('page-content').style.zoom = window.__zoom;
+                var a = document.getElementById('activity-name');
+                var b = document.getElementById('meta_content');
+                if(!!a){
+                    a.style.zoom = 1/window.__zoom;
+                }
+                if(!!b){
+                    b.style.zoom = 1/window.__zoom;
+                }
+            }
+            var images = document.getElementsByTagName('img');
+            for (var i = 0,il=images.length;i<il;i++) {
+                if (window.__second_open__ && images[i].getAttribute('__sec_open_place_holder__')) {
+                    continue;
+                }
+                images[i].style.zoom = 1/window.__zoom;
+            }
+            var iframe = document.getElementsByTagName('iframe');
+            for (var i = 0,il=iframe.length;i<il;i++) {
+                if (window.__second_open__ && iframe[i].getAttribute('__sec_open_place_holder__')) {
+                    continue;
+                }
+                var a = iframe[i];
+                a.style.zoom = 1/window.__zoom;
+                var src_ = a.getAttribute('data-src')||"";
+                if(!/http(s)*\:\/\/v\.qq\.com\/iframe\/(preview|player)\.html\?/.test(src_)){
+                    continue;
+                }
+                var ratio = a.getAttribute("_ratio");
+                var vid = a.getAttribute("_vid");
+                a.removeAttribute("_ratio");
+                a.removeAttribute("_vid");
+                var vw = a.offsetWidth - (getOuterW(a)||0);
+                var vh = vw/ratio;
+                var h = vh + (getOuterH(a)||0)
+                a.style.cssText += "height: " + h + "px !important;"
+                a.setAttribute("height",h);
+                a.setAttribute("data-src",location.protocol+"//v.qq.com/iframe/player.html?vid="+ vid + "&width="+vw+"&height="+vh+"&auto=0");
+                a.style.display = "none";
+                var parent = a.parentNode;
+                if(!parent){
+                    continue;
+                }
+                for(var j=0,jl=parent.children.length;j<jl;j++){
+                    var child = parent.children[j];
+                    if(child.className.indexOf("img_loading")>=0 && child.getAttribute("data-vid")==vid){
+                        child.style.cssText += "height: " + h + "px !important;";
+                        child.style.display = "";
+                    }
+                }
+            }
+        }
+    })();
+})();
+</script>
+<script nonce="1799824546" type="text/javascript">
+    var new_appmsg = 1;
+    var item_show_type = "0";
+    var can_see_complaint = "0";
+    var not_in_mm_css = "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg_new/not_in_mm435ee6.css";
+    var windowwx_css = "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg_new/winwx435ee6.css";
+    var article_improve_combo_css = "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg_new/combo435ee6.css";
+    var tid = "";
+    var aid = "";
+    var clientversion = "";
+    var appuin = ""||"MjM5MDE0Mjc4MA==";
+
+    var source = "";
+    var ascene = "";
+    var subscene = "";
+    var sessionid = ""||"";
+    var abtest_cookie = "";
+
+    var scene = 75;
+
+    var itemidx = "";
+    var appmsg_token   = "";
+    var _copyright_stat = "2";
+    var _ori_article_type = "";
+
+    var is_follow = "";
+    var nickname = "InfoQ";
+    var appmsg_type = "9";
+    var ct = "1489103997";
+    var publish_time = "2017-03-10" || "";
+    var user_name = "gh_b443474846ae";
+    var user_name_new = "";
+    var fakeid   = "";
+    var version   = "";
+    var is_limit_user   = "0";
+    var round_head_img = "http://mmsns.qpic.cn/mmsns/YriaiaJPb26VNrYH1m5oc3B5qax7aX7RxIz5e2Wg8vpzI6LavON1g8WQ/0";
+    var hd_head_img = "http://wx.qlogo.cn/mmhead/Q3auHgzwzM63wOyLI60Bro3CVPy56dw7BoZ6LiaosxSd8XM4UNl9RVw/0"||"";
+    var ori_head_img_url = "http://wx.qlogo.cn/mmhead/Q3auHgzwzM63wOyLI60Bro3CVPy56dw7BoZ6LiaosxSd8XM4UNl9RVw/132";
+    var msg_title = "TensorFlow领衔，七大深度学习框架大对比！";
+    var msg_desc = "TensorFlow 在 2015 年年底一出现就受到了极大的关注，在一个月内获得了 GitHub上超过一万颗星的关注，目前在所有的机器学习、深度学习项目中排名第一，甚至在所有的 Python 项目中也排名第一。";
+    var msg_cdn_url = "http://mmbiz.qpic.cn/mmbiz_jpg/YriaiaJPb26VO9b45rYergV9VNqq44hUXvsNeKgX8BjwXKdSeUHicpLm3ibKUvLUw9belpGVBQMlrNsCMK3hF6w11A/0?wx_fmt=jpeg"; 
+    var cdn_url_1_1  = ""; 
+    var cdn_url_235_1 = ""; 
+    
+    var msg_link = ""; 
+    var user_uin = "0"*1;
+    var msg_source_url = '';
+    var img_format = 'jpeg';
+    var srcid = '';
+    var req_id = '2616A0Z9vbRoKctomkSVArIb';
+    var networkType;
+    var appmsgid = '' || ''|| "2650995584";
+    var comment_id = "1030148320" || "1030148320" * 1;
+    var comment_enabled = "" * 1;
+    var is_need_reward = "0" * 1;
+    var is_https_res = ("" * 1) && (location.protocol == "https:");
+    var msg_daily_idx = "1" || "";
+    var profileReportInfo = "" || "";
+
+    var devicetype = "";
+    var source_encode_biz = "MzA5NzkxMzg1Nw==";
+    var source_username = "gh_e24b14d1c2aa";
+    
+    var reprint_ticket = "O4mY9l2YLXUbXwH13EHlsQsaIq%2BFzjIIZaEh9syKkCDCzUwggc3gPio6IfPMBxaO";
+    var source_mid = "2653162065";
+    var source_idx = "1";
+    var source_biz = "3097913857";
+    var author_id = "";
+
+    
+    var optimizing_flag = "0" * 1;
+    var ad_abtest_padding = "0" * 1;
+
+    var show_comment = "";
+    var __appmsgCgiData = {
+        wxa_product : ""*1,
+        wxa_cps : ""*1,
+        show_msg_voice: "0"*1,
+        can_use_page : "0"*1,
+        is_wxg_stuff_uin : "0"*1,
+        card_pos : "0",
+        copyright_stat : "2",
+        source_biz : "3097913857",
+        hd_head_img : "http://wx.qlogo.cn/mmhead/Q3auHgzwzM63wOyLI60Bro3CVPy56dw7BoZ6LiaosxSd8XM4UNl9RVw/0"||(window.location.protocol+"//"+window.location.host + "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/pic/appmsg/pic_rumor_link.2x42f400.jpg")
+    };
+    var _empty_v = "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/pic/pages/voice/empty42f400.mp3";
+
+    var copyright_stat = "2" * 1;
+
+    var pay_fee = "" * 1;
+    var pay_timestamp = "";
+    var need_pay = "" * 1;
+
+    var need_report_cost = "0" * 1;
+    var use_tx_video_player = "0" * 1;
+    var appmsg_fe_filter = "contenteditable";
+
+    var friend_read_source = "" || "";
+    var friend_read_version = "" || "";
+    var friend_read_class_id = "" || "";
+
+    var is_only_read = "1" * 1;
+    var read_num = "" * 1;
+    var like_num = "" * 1;
+    var liked = "" == 'true' ? true : false;
+    var is_temp_url = "" ? 1 : 0;
+    var send_time = "";
+    var icon_emotion_switch = "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/emotion/icon_emotion_switch.2x42f400.png";
+    var icon_emotion_switch_active = "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/emotion/icon_emotion_switch_active.2x42f400.png";
+    var icon_loading_white = "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/common/icon_loading_white42f400.gif";
+    var icon_audio_unread = "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/audio/icon_audio_unread42f400.png";
+    var icon_qqmusic_default = "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/qqmusic/icon_qqmusic_default.2x42f400.png";
+    var icon_qqmusic_source = "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/qqmusic/icon_qqmusic_source42f400.png";
+    var icon_kugou_source = "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/kugou/icon_kugou_source42f400.png";
+
+    var topic_default_img = '//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/topic/pic_book_thumb.2x42f400.png';
+    var comment_edit_icon = '//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg_new/icon_edit42f400.png';
+    var comment_loading_img = '//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/common/icon_loading_white42f400.gif';
+
+    var voice_in_appmsg = {
+        "1":"1"
+            };
+
+    var reprint_style = '0'*1;
+    var wxa_img_alert = "" != 'false';
+
+    
+    var more_read_type = '0'*1;
+
+    
+    
+    
+    
+
+    
+    var weapp_sn_arr_json = "" || "";
+
+    
+    var ban_scene = "0" * 1;
+
+    var svr_time = "1548493183" * 1;
+    
+    var is_transfer_msg = ""*1||0;
+
+    var malicious_title_reason_id = "0" * 1; 
+    var malicious_content_type = "0" * 1; 
+
+    
+    var modify_time = "";
+
+    
+    var isprofileblock = "0";
+
+    
+    var hotspotInfoList = [
+                    ];
+
+        window.wxtoken = "777";
+        
+    
+    
+    
+    
+    window.is_login = '0' * 1; 
+
+    window.__moon_initcallback = function(){
+        if(!!window.__initCatch){
+            window.__initCatch({
+                idkey : 27611+2,
+                startKey : 0,
+                limit : 128,
+                badjsId: 43,
+                reportOpt : {
+                    uin : uin,
+                    biz : biz,
+                    mid : mid,
+                    idx : idx,
+                    sn  : sn
+                },
+                extInfo : {
+                    network_rate : 0.01,    
+                    badjs_rate: 0.1 
+                }
+            });
+        }
+    }
+            window.isSg=true;
+        window.sg_qr_code="/rr?timestamp=1548493183\x26amp;src=3\x26amp;ver=1\x26amp;signature=aMJui95VD3MeofiVqV5WAovjeyLBQi8*01G92yZ1DqfOydAx5h*cfc*UKx1d8nc0SNgtcbJagQE*as1FMQMJYbt3cCNT1O6419BSxpGuI38=";
+        window.sg_data={
+            src:"3",
+            ver:"1",
+            timestamp:"1548493061",
+            signature:"wz0C0rOE4hyEHQTWtOplUTyZH1CHKoIewuP9cgQC2EHDKbv6p21upnrff56OruquA1vHegJq67hunYdZeZlGQSIM0V4EqgA2jmqebhDeyIbEA3lsyI2mTncb4cM-0xyK3PU9EBFpvopUUJ2Mit**gpKpKrrxzSAe-vFyE4vvIoI="
+        }
+        window.__moon_initcallback = function(){
+            if(!!window.__initCatch){
+                window.__initCatch({
+                    idkey : 29711,
+                    startKey : 120,
+                    badjsId: 63,
+                    reportOpt : {
+                        uin : uin,
+                        biz : biz,
+                        mid : mid,
+                        idx : idx,
+                        sn  : sn
+                    },
+                    extInfo : {
+                        network_rate : 0.01    
+                    }
+                });
+            }
+        }
+
+        
+    var title ="InfoQ";
+
+    var is_new_msg=true;
+    
+    
+
+    var is_wash = '' * 1;
+</script>
+
+<script nonce="1799824546" type="text/javascript">
+(function(_g){
+    _g.appmsg_like_type = "1" * 1 ? "1" * 1 : 1;
+    
+    _g.clientversion = "";
+    _g.passparam = ""; 
+    if(!_g.msg_link) {
+      _g.msg_link = "";
+    }
+    _g.appmsg_type = "9"; 
+    _g.devicetype = ""; 
+})(window);
+</script>
+
+
+        <script nonce="1799824546">window.__moon_host = 'res.wx.qq.com';window.__moon_mainjs = 'appmsg/index.js';window.moon_map = {"a/appdialog_confirm.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/appdialog_confirm.html42f400.js","widget/wx_profile_dialog_primary.css":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/widget/wx_profile_dialog_primary.css42f400.js","pages/iframe_communicate.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/iframe_communicate42f400.js","new_video/player.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/new_video/player.html433882.js","biz_wap/zepto/touch.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/zepto/touch42f400.js","biz_wap/zepto/event.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/zepto/event42f400.js","biz_wap/zepto/zepto.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/zepto/zepto42f400.js","page/pages/video.css":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/pages/video.css435ee6.js","a/tpl/smallbanner_msg_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/smallbanner_msg_tpl.html42f400.js","a/tpl/smallbanner_info_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/smallbanner_info_tpl.html42f400.js","a/tpl/banner_info_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/banner_info_tpl.html42f400.js","a/tpl/promote_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/promote_tpl.html42f400.js","a/tpl/smallcard_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/smallcard_tpl.html42f400.js","a/tpl/info_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/info_tpl.html42f400.js","a/tpl/cardticket_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/cardticket_tpl.html42f400.js","a/tpl/banner_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/banner_tpl.html42f400.js","a/tpl/sponsor_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/sponsor_tpl.html42f400.js","a/tpl/new_cpc_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/new_cpc_tpl.html42f400.js","appmsg/emotion/caret.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/caret42f400.js","biz_wap/utils/localstorage.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/localstorage42f400.js","appmsg/friend_comment_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/friend_comment_tpl.html42f400.js","appmsg/comment_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/comment_tpl.html42f400.js","biz_wap/utils/fakehash.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/fakehash42f400.js","appmsg/comment_report.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/comment_report42f400.js","a/appdialog_confirm.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/appdialog_confirm42f400.js","new_video/player.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/new_video/player4306fd.js","a/tpl/mpda_bottom_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/mpda_bottom_tpl.html42f400.js","a/tpl/crt_size_map.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/crt_size_map42f400.js","biz_wap/jsapi/cardticket.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/jsapi/cardticket42f400.js","biz_common/jquery.md5.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/jquery.md542f400.js","biz_common/utils/emoji_panel_data.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/emoji_panel_data42f400.js","biz_common/utils/emoji_data.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/emoji_data42f400.js","appmsg/emotion/textarea.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/textarea42f400.js","appmsg/emotion/nav.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/nav42f400.js","appmsg/emotion/common.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/common42f400.js","appmsg/emotion/slide.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/slide42f400.js","appmsg/emotion/dom.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/dom42f400.js","pages/music_report_conf.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/music_report_conf42f400.js","pages/report.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/report4306fd.js","pages/player_adaptor.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/player_adaptor42f400.js","pages/music_player.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/music_player42f400.js","appmsg/more_read_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/more_read_tpl.html42f400.js","appmsg/retry_ajax.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/retry_ajax42f400.js","complain/tips.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/complain/tips42f400.js","pages/loadscript.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/loadscript42f400.js","biz_wap/utils/ajax_load_js.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/ajax_load_js42f400.js","appmsg/comment.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/comment4317dc.js","a/ios.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/ios42f400.js","a/android.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/android42f400.js","a/profile.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/profile42f400.js","a/app_card.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/app_card430506.js","a/sponsor.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/sponsor42f400.js","a/tpl/cpc_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/cpc_tpl.html42f400.js","a/video.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/video42f400.js","a/a_config.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/a_config42f400.js","a/tpl/crt_tpl_manager.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/tpl/crt_tpl_manager42f400.js","a/cpc_a_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/cpc_a_tpl.html42f400.js","a/sponsor_a_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/sponsor_a_tpl.html42f400.js","a/a_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/a_tpl.html42f400.js","a/mpshop.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/mpshop42f400.js","a/wxopen_card.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/wxopen_card42f400.js","a/card.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/card42f400.js","biz_wap/utils/position.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/position42f400.js","a/a_report.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/a_report42f400.js","biz_wap/utils/show_time.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/show_time42f400.js","biz_common/utils/get_para_list.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/get_para_list42f400.js","biz_wap/utils/openUrl.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/openUrl42f400.js","a/a_sign.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/a_sign42f400.js","appmsg/my_comment_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/my_comment_tpl.html42f400.js","appmsg/cmt_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/cmt_tpl.html42f400.js","sougou/a_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/sougou/a_tpl.html42f400.js","appmsg/emotion/emotion.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/emotion42f400.js","biz_common/base64.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/base6442f400.js","biz_common/utils/report.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/report42f400.js","appmsg/articleReport.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/articleReport42f400.js","biz_wap/utils/hand_up_state.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/hand_up_state42f400.js","biz_common/utils/http.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/http42f400.js","biz_common/utils/cookie.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/cookie42f400.js","appmsg/topic_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/topic_tpl.html42f400.js","pages/weapp_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/weapp_tpl.html42f400.js","biz_common/utils/monitor.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/monitor42f400.js","pages/voice_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/voice_tpl.html42f400.js","pages/kugoumusic_ctrl.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/kugoumusic_ctrl42f400.js","pages/qqmusic_ctrl.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/qqmusic_ctrl42f400.js","pages/voice_component.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/voice_component42f400.js","pages/qqmusic_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/qqmusic_tpl.html42f400.js","new_video/ctl.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/new_video/ctl4306fd.js","appmsg/open_url_with_webview.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/open_url_with_webview42f400.js","appmsg/more_read.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/more_read42f400.js","appmsg/reward_entry.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/reward_entry42f400.js","appmsg/like.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/like430b95.js","pages/version4video.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/version4video42f400.js","biz_wap/utils/storage.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/storage42f400.js","appmsg/share_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/share_tpl.html42f400.js","appmsg/appmsgext.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/appmsgext430b95.js","appmsg/img_copyright_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/img_copyright_tpl.html42f400.js","pages/video_ctrl.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/video_ctrl42f400.js","pages/create_txv.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/create_txv42f400.js","appmsg/comment_utils.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/comment_utils42f400.js","biz_common/ui/imgonepx.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/ui/imgonepx42f400.js","appmsg/malicious_wording.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/malicious_wording42f400.js","biz_common/utils/wxgspeedsdk.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/wxgspeedsdk42f400.js","a/a.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/a431c40.js","rt/appmsg/getappmsgext.rt.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/rt/appmsg/getappmsgext.rt42f400.js","pages/video_communicate_adaptor.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/video_communicate_adaptor433882.js","biz_wap/utils/ajax_wx.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/ajax_wx42f400.js","biz_common/utils/respTypes.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/respTypes42f400.js","biz_wap/utils/log.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/log42f400.js","sougou/index.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/sougou/index42f400.js","biz_wap/safe/mutation_observer_report.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/safe/mutation_observer_report42f400.js","appmsg/fereport.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/fereport42f400.js","appmsg/fereport_without_localstorage.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/fereport_without_localstorage42f400.js","appmsg/report.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/report42f400.js","appmsg/report_and_source.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/report_and_source42f400.js","appmsg/page_pos.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/page_pos431b87.js","appmsg/cdn_speed_report.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/cdn_speed_report42f400.js","appmsg/wxtopic.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/wxtopic42f400.js","appmsg/weapp.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/weapp433882.js","appmsg/weproduct.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/weproduct42f400.js","appmsg/voicemsg.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/voicemsg42f400.js","appmsg/autoread.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/autoread42f400.js","appmsg/voice.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/voice42f400.js","appmsg/qqmusic.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/qqmusic43440b.js","appmsg/iframe.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/iframe433882.js","appmsg/product.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/product42f400.js","appmsg/review_image.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/review_image435a90.js","appmsg/outer_link.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/outer_link433882.js","appmsg/copyright_report.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/copyright_report42f400.js","appmsg/async.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/async435ee6.js","biz_wap/ui/lazyload_img.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/ui/lazyload_img42f400.js","biz_common/log/jserr.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/log/jserr42f400.js","appmsg/share.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/share42f50a.js","appmsg/cdn_img_lib.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/cdn_img_lib42f400.js","appmsg/finance_communicate.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/finance_communicate42f400.js","page/appmsg_new/not_in_mm.css":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg_new/not_in_mm.css435ee6.js","page/appmsg_new/combo.css":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg_new/combo.css435ee6.js","biz_wap/utils/wapsdk.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/wapsdk42f400.js","a/mpAdAsync.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/mpAdAsync4317dc.js","biz_common/utils/url/parse.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/url/parse42f400.js","appmsg/appmsg_report.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/appmsg_report435ac2.js","biz_common/moment.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/moment42f400.js","biz_wap/jsapi/core.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/jsapi/core42f400.js","biz_common/dom/event.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/event42f400.js","appmsg/test.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/test42f400.js","biz_wap/utils/mmversion.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/mmversion42f400.js","appmsg/max_age.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/max_age42f400.js","biz_common/dom/attr.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/attr42f400.js","biz_wap/utils/ajax.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/ajax42f400.js","appmsg/log.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/log42f400.js","biz_common/dom/class.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/class42f400.js","biz_wap/utils/device.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/device42f400.js","appmsg/weapp_common.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/weapp_common42f400.js","biz_common/utils/string/html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/string/html42f400.js","cps/tpl/list_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/cps/tpl/list_tpl.html42f400.js","cps/tpl/card_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/cps/tpl/card_tpl.html42f400.js","cps/tpl/banner_tpl.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/cps/tpl/banner_tpl.html42f400.js","biz_common/tmpl.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/tmpl42f400.js","appmsg/index.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/index435ac2.js"};</script><script nonce="1799824546" type="text/javascript" id="moon_inline" > window.__mooninline=1; window.setTimeout(function() {  function __moonf__(){
+if(!window.__moonhasinit){
+window.__moonhasinit=!0,window.__moonclientlog=[],window.__wxgspeeds&&(window.__wxgspeeds.moonloadedtime=+new Date),
+"object"!=typeof JSON&&(window.JSON={
+stringify:function(){
+return"";
+},
+parse:function(){
+return{};
+}
+});
+var e=function(){
+function e(e){
+try{
+var o;
+/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)?o="writeLog":/(Android)/i.test(navigator.userAgent)&&(o="log"),
+o&&t(o,e);
+}catch(n){
+throw console.error(n),n;
+}
+}
+function t(e,o){
+var n,r,i={};
+n=top!=window?top.window:window;
+try{
+r=n.WeixinJSBridge,i=n.document;
+}catch(a){}
+e&&r&&r.invoke?r.invoke(e,{
+level:"info",
+msg:"[WechatFe][moon]"+o
+}):setTimeout(function(){
+i.addEventListener?i.addEventListener("WeixinJSBridgeReady",function(){
+t(e,o);
+},!1):i.attachEvent&&(i.attachEvent("WeixinJSBridgeReady",function(){
+t(e,o);
+}),i.attachEvent("onWeixinJSBridgeReady",function(){
+t(e,o);
+}));
+},0);
+}
+var n;
+localStorage&&JSON.parse(localStorage.getItem("__WXLS__moonarg"))&&"fromls"==JSON.parse(localStorage.getItem("__WXLS__moonarg")).method&&(n=!0),
+e(" moon init, moon_inline:"+window.__mooninline+", moonls:"+n),function(){
+var e={},o={},t={};
+e.COMBO_UNLOAD=0,e.COMBO_LOADING=1,e.COMBO_LOADED=2;
+var n=function(e,t,n){
+if(!o[e]){
+o[e]=n;
+for(var r=3;r--;)try{
+moon.setItem(moon.prefix+e,n.toString()),moon.setItem(moon.prefix+e+"_ver",moon_map[e]);
+break;
+}catch(i){
+moon.clear();
+}
+}
+},r=window.alert;
+window.__alertList=[],window.alert=function(e){
+r(e),window.__alertList.push(e);
+};
+var i=function(e){
+if(!e||!o[e])return null;
+var n=o[e];
+if("function"==typeof n&&!t[e]){
+var a={},s={
+exports:a
+},c=n(i,a,s,r);
+n=o[e]=c||s.exports,t[e]=!0;
+}
+if(".css"===e.substr(-4)){
+var d=document.getElementById(e);
+if(!d){
+d=document.createElement("style"),d.id=e;
+var _=/url\s*\(\s*\/(\"(?:[^\\\"\r\n\f]|\\[\s\S])*\"|'(?:[^\\'\n\r\f]|\\[\s\S])*'|[^)}]+)\s*\)/g,m=window.testenv_reshost||window.__moon_host||"res.wx.qq.com";
+n=n.replace(_,"url(//"+m+"/$1)"),d.innerHTML=n,document.getElementsByTagName("head")[0].appendChild(d);
+}
+}
+return n;
+};
+e.combo_status=e.COMBO_UNLOAD,e.run=function(){
+var o=e.run.info,t=o&&o[0],n=o&&o[1];
+if(t&&e.combo_status==e.COMBO_LOADED){
+var r=i(t);
+n&&n(r);
+}
+},e.use=function(o,t){
+window.__wxgspeeds&&(window.__wxgspeeds.seajs_use_time=+new Date),e.run.info=[o,t],
+e.run();
+},window.define=n,window.seajs=e;
+}(),function(){
+if(window.__nonce_str){
+var e=document.createElement;
+document.createElement=function(o){
+var t=e.apply(this,arguments);
+return"object"==typeof o&&(o=o.toString()),"string"==typeof o&&"script"==o.toLowerCase()&&t.setAttribute("nonce",window.__nonce_str),
+t;
+};
+}
+window.addEventListener&&window.__DEBUGINFO&&Math.random()<.01&&window.addEventListener("load",function(){
+var e=document.createElement("script");
+e.src=__DEBUGINFO.safe_js,e.type="text/javascript",e.async=!0;
+var o=document.head||document.getElementsByTagName("head")[0];
+o.appendChild(e);
+});
+}(),function(){
+function t(e){
+return"[object Array]"===Object.prototype.toString.call(e);
+}
+function n(e){
+return"[object Object]"===Object.prototype.toString.call(e);
+}
+function r(e){
+var t=e.stack+" "+e.toString()||"";
+try{
+if(window.testenv_reshost){
+var n="http(s)?://"+window.testenv_reshost,r=new RegExp(n,"g");
+t=t.replace(r,"");
+}else t=t.replace(/http(s)?:\/\/res\.wx\.qq\.com/g,"");
+for(var r=/\/([^.]+)\/js\/(\S+?)\.js(\,|:)?/g;r.test(t);)t=t.replace(r,function(e,o,t,n){
+return t+n;
+});
+}catch(e){
+t=e.stack?e.stack:"";
+}
+var i=[];
+for(o in u)u.hasOwnProperty(o)&&i.push(o+":"+u[o]);
+return i.push("STK:"+t.replace(/\n/g,"")),i.join("|");
+}
+function i(e){
+if(!e){
+var o=window.onerror;
+window.onerror=function(){},f=setTimeout(function(){
+window.onerror=o,f=null;
+},50);
+}
+}
+function a(e,o,t){
+if(!/^mp\.weixin\.qq\.com$/.test(location.hostname)){
+var n=[];
+t=t.replace(location.href,(location.origin||"")+(location.pathname||"")).replace("#wechat_redirect","").replace("#rd","").split("&");
+for(var r=0,i=t.length;i>r;r++){
+var a=t[r].split("=");
+a[0]&&a[1]&&n.push(a[0]+"="+encodeURIComponent(a[1]));
+}
+var s=new window.Image;
+return void(s.src=(o+n.join("&")).substr(0,1024));
+}
+var c;
+if(window.ActiveXObject)try{
+c=new ActiveXObject("Msxml2.XMLHTTP");
+}catch(d){
+try{
+c=new ActiveXObject("Microsoft.XMLHTTP");
+}catch(_){
+c=!1;
+}
+}else window.XMLHttpRequest&&(c=new XMLHttpRequest);
+c&&(c.open(e,o,!0),c.setRequestHeader("cache-control","no-cache"),c.setRequestHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8"),
+c.setRequestHeader("X-Requested-With","XMLHttpRequest"),c.send(t));
+}
+function s(e){
+return function(o,t){
+if("string"==typeof o)try{
+o=new Function(o);
+}catch(n){
+throw n;
+}
+var r=[].slice.call(arguments,2),a=o;
+return o=function(){
+try{
+return a.apply(this,r.length&&r||arguments);
+}catch(e){
+throw e.stack&&console&&console.error&&console.error("[TryCatch]"+e.stack),_&&window.__moon_report&&(window.__moon_report([{
+offset:j,
+log:"timeout_error;host:"+location.host,
+e:e
+}]),i(f)),e;
+}
+},e(o,t);
+};
+}
+function c(e){
+return function(o,t,n){
+if("undefined"==typeof n)var n=!1;
+var r=this,a=t||function(){};
+return t=function(){
+try{
+return a.apply(r,arguments);
+}catch(e){
+throw e.stack&&console&&console.error&&console.error("[TryCatch]"+e.stack),_&&window.__moon_report&&(window.__moon_report([{
+offset:x,
+log:"listener_error;type:"+o+";host:"+location.host,
+e:e
+}]),i(f)),e;
+}
+},a.moon_lid=E,b[E]=t,E++,e.call(r,o,t,n);
+};
+}
+function d(e){
+return function(o,t,n){
+if("undefined"==typeof n)var n=!1;
+var r=this;
+return t=b[t.moon_lid],e.call(r,o,t,n);
+};
+}
+var _,m,l,w,u,p,f,h=/MicroMessenger/i.test(navigator.userAgent),g=/MPAPP/i.test(navigator.userAgent),v=window.define,y=0,x=2,O=4,j=9,D=10;
+if(window.__initCatch=function(e){
+_=e.idkey,m=e.startKey||0,l=e.limit,w=e.badjsId,u=e.reportOpt||"",p=e.extInfo||{},
+p.rate=p.rate||.5;
+},window.__moon_report=function(e,o){
+var i=!1,s="";
+try{
+s=top.location.href;
+}catch(c){
+i=!0;
+}
+var d=.5;
+if(p&&p.rate&&(d=p.rate),o&&"number"==typeof o&&(d=o),!(!/mp\.weixin\.qq\.com/.test(location.href)&&!/payapp\.weixin\.qq\.com/.test(location.href)||Math.random()>d||!h&&!g||top!=window&&!i&&!/mp\.weixin\.qq\.com/.test(s))&&(n(e)&&(e=[e]),
+t(e)&&""!=_)){
+var u="",f=[],v=[],y=[],x=[];
+"number"!=typeof l&&(l=1/0);
+for(var j=0;j<e.length;j++){
+var D=e[j]||{};
+if(!(D.offset>l||"number"!=typeof D.offset||D.offset==O&&p&&p.network_rate&&Math.random()>=p.network_rate)){
+var b=1/0==l?m:m+D.offset;
+f[j]="[moon]"+_+"_"+b+";"+D.log+";"+r(D.e||{})||"",v[j]=b,y[j]=1;
+}
+}
+for(var E=0;E<v.length;E++)x[E]=_+"_"+v[E]+"_"+y[E],u=u+"&log"+E+"="+f[E];
+if(x.length>0){
+a("POST",location.protocol+"//mp.weixin.qq.com/mp/jsmonitor?","idkey="+x.join(";")+"&r="+Math.random()+"&lc="+f.length+u);
+var d=1;
+if(p&&p.badjs_rate&&(d=p.badjs_rate),w&&Math.random()<d){
+u=u.replace(/uin\:(.)*\|biz\:(.)*\|mid\:(.)*\|idx\:(.)*\|sn\:(.)*\|/,"");
+var S=new Image,I="https://badjs.weixinbridge.com/badjs?id="+w+"&level=4&from="+encodeURIComponent(location.host)+"&msg="+encodeURIComponent(u);
+S.src=I.slice(0,1024);
+}
+}
+}
+},window.setTimeout=s(window.setTimeout),window.setInterval=s(window.setInterval),
+Math.random()<.01&&window.Document&&window.HTMLElement){
+var b={},E=0;
+Document.prototype.addEventListener=c(Document.prototype.addEventListener),Document.prototype.removeEventListener=d(Document.prototype.removeEventListener),
+HTMLElement.prototype.addEventListener=c(HTMLElement.prototype.addEventListener),
+HTMLElement.prototype.removeEventListener=d(HTMLElement.prototype.removeEventListener);
+}
+var S=window.navigator.userAgent;
+if((/ip(hone|ad|od)/i.test(S)||/android/i.test(S))&&!/windows phone/i.test(S)&&window.localStorage&&window.localStorage.setItem){
+var I=window.localStorage.setItem,L=0;
+window.localStorage.setItem=function(e,o){
+if(!(L>=10))try{
+I.call(window.localStorage,e,o);
+}catch(t){
+t.stack&&console&&console.error&&console.error("[TryCatch]"+t.stack),window.__moon_report([{
+offset:D,
+log:"localstorage_error;"+t.toString(),
+e:t
+}]),L++,L>=3&&window.moon&&window.moon.clear&&moon.clear();
+}
+};
+}
+window.seajs&&v&&(window.define=function(){
+for(var o,t=[],n=arguments&&arguments[0],a=0,s=arguments.length;s>a;a++){
+var c=o=arguments[a];
+"function"==typeof o&&(o=function(){
+try{
+return c.apply(this,arguments);
+}catch(o){
+throw"string"==typeof n&&console.error("[TryCatch][DefineeErr]id:"+n),o.stack&&console&&console.error&&console.error("[TryCatch]"+o.stack),
+_&&window.__moon_report&&(window.__moon_report([{
+offset:y,
+log:"define_error;id:"+n+";",
+e:o
+}]),i(f)),e(" [define_error]"+JSON.stringify(r(o))),o;
+}
+},o.toString=function(e){
+return function(){
+return e.toString();
+};
+}(arguments[a])),t.push(o);
+}
+return v.apply(this,t);
+});
+}(),function(o){
+function t(e,o,t){
+return window.__DEBUGINFO?(window.__DEBUGINFO.res_list||(window.__DEBUGINFO.res_list=[]),
+window.__DEBUGINFO.res_list[e]?(window.__DEBUGINFO.res_list[e][o]=t,!0):!1):!1;
+}
+function n(e){
+var o=new TextEncoder("utf-8").encode(e),t=crypto.subtle||crypto.webkitSubtle;
+return t.digest("SHA-256",o).then(function(e){
+return r(e);
+});
+}
+function r(e){
+for(var o=[],t=new DataView(e),n=0;n<t.byteLength;n+=4){
+var r=t.getUint32(n),i=r.toString(16),a="00000000",s=(a+i).slice(-a.length);
+o.push(s);
+}
+return o.join("");
+}
+function i(e,o,t){
+if("object"==typeof e){
+var n=Object.prototype.toString.call(e).replace(/^\[object (.+)\]$/,function(e,o){
+return o;
+});
+if(t=t||e,"Array"==n){
+for(var r=0,i=e.length;i>r;++r)if(o.call(t,e[r],r,e)===!1)return;
+}else{
+if("Object"!==n&&a!=e)throw"unsupport type";
+if(a==e){
+for(var r=e.length-1;r>=0;r--){
+var s=a.key(r),c=a.getItem(s);
+if(o.call(t,c,s,e)===!1)return;
+}
+return;
+}
+for(var r in e)if(e.hasOwnProperty(r)&&o.call(t,e[r],r,e)===!1)return;
+}
+}
+}
+var a=o.localStorage,s=document.head||document.getElementsByTagName("head")[0],c=1,d=11,_=12,m=13,l=window.__allowLoadResFromMp?1:2,w=window.__allowLoadResFromMp?1:0,u=l+w,p=window.testenv_reshost||window.__moon_host||"res.wx.qq.com",f=new RegExp("^(http(s)?:)?//"+p);
+window.__loadAllResFromMp&&(p="mp.weixin.qq.com",l=0,u=l+w);
+var h={
+prefix:"__MOON__",
+loaded:[],
+unload:[],
+clearSample:!0,
+hit_num:0,
+mod_num:0,
+version:1003,
+cacheData:{
+js_mod_num:0,
+js_hit_num:0,
+js_not_hit_num:0,
+js_expired_num:0,
+css_mod_num:0,
+css_hit_num:0,
+css_not_hit_num:0,
+css_expired_num:0
+},
+init:function(){
+h.loaded=[],h.unload=[];
+var e,t,r;
+if(window.no_moon_ls&&(h.clearSample=!0),a){
+var s="_moon_ver_key_",c=a.getItem(s);
+c!=h.version&&(h.clear(),a.setItem(s,h.version));
+}
+if((-1!=location.search.indexOf("no_moon1=1")||-1!=location.search.indexOf("no_lshttps=1"))&&h.clear(),
+a){
+var d=1*a.getItem(h.prefix+"clean_time"),_=+new Date;
+if(_-d>=1296e6){
+h.clear();
+try{
+!!a&&a.setItem(h.prefix+"clean_time",+new Date);
+}catch(m){}
+}
+}
+i(moon_map,function(i,s){
+if(t=h.prefix+s,r=!!i&&i.replace(f,""),e=!!a&&a.getItem(t),version=!!a&&(a.getItem(t+"_ver")||"").replace(f,""),
+h.mod_num++,r&&-1!=r.indexOf(".css")?h.cacheData.css_mod_num++:r&&-1!=r.indexOf(".js")&&h.cacheData.js_mod_num++,
+h.clearSample||!e||r!=version)h.unload.push(r.replace(f,"")),r&&-1!=r.indexOf(".css")?e?r!=version&&h.cacheData.css_expired_num++:h.cacheData.css_not_hit_num++:r&&-1!=r.indexOf(".js")&&(e?r!=version&&h.cacheData.js_expired_num++:h.cacheData.js_not_hit_num++);else{
+if("https:"==location.protocol&&window.moon_hash_map&&window.moon_hash_map[s]&&window.crypto)try{
+n(e).then(function(e){
+window.moon_hash_map[s]!=e&&console.log(s);
+});
+}catch(c){}
+try{
+var d="//# sourceURL="+s+"\n//@ sourceURL="+s;
+o.eval.call(o,'define("'+s+'",[],'+e+")"+d),h.hit_num++,r&&-1!=r.indexOf(".css")?h.cacheData.css_hit_num++:r&&-1!=r.indexOf(".js")&&h.cacheData.js_hit_num++;
+}catch(c){
+h.unload.push(r.replace(f,""));
+}
+}
+}),h.load(h.genUrl());
+},
+genUrl:function(){
+var e=h.unload;
+if(!e||e.length<=0)return[];
+var o,t,n="",r=[],i={},a=-1!=location.search.indexOf("no_moon2=1"),s="//"+p;
+-1!=location.href.indexOf("moon_debug2=1")&&(s="//mp.weixin.qq.com");
+for(var c=0,d=e.length;d>c;++c){
+/^\/(.*?)\//.test(e[c]);
+var _=/^\/(.*?)\//.exec(e[c]);
+_.length<2||!_[1]||(t=_[1],n=i[t],n?(o=n+","+e[c],o.length>1e3||a?(r.push(n+"?v="+h.version),
+n=location.protocol+s+e[c],i[t]=n):(n=o,i[t]=n)):(n=location.protocol+s+e[c],i[t]=n));
+}
+for(var m in i)i.hasOwnProperty(m)&&r.push(i[m]);
+return r;
+},
+load:function(e){
+if(window.__wxgspeeds&&(window.__wxgspeeds.mod_num=h.mod_num,window.__wxgspeeds.hit_num=h.hit_num),
+!e||e.length<=0)return seajs.combo_status=seajs.COMBO_LOADED,seajs.run(),console.debug&&console.debug("[moon] load js complete, all in cache, cost time : 0ms, total count : "+h.mod_num+", hit num: "+h.hit_num),
+void window.__moonclientlog.push("[moon] load js complete, all in cache, cost time : 0ms, total count : "+h.mod_num+", hit num: "+h.hit_num);
+seajs.combo_status=seajs.COMBO_LOADING;
+var o=0,t=+new Date;
+window.__wxgspeeds&&(window.__wxgspeeds.combo_times=[],window.__wxgspeeds.combo_times.push(t)),
+i(e,function(n){
+h.request(n,u,function(){
+if(window.__wxgspeeds&&window.__wxgspeeds.combo_times.push(+new Date),o++,o==e.length){
+var n=+new Date-t;
+window.__wxgspeeds&&(window.__wxgspeeds.mod_downloadtime=n),seajs.combo_status=seajs.COMBO_LOADED,
+seajs.run(),console.debug&&console.debug("[moon] load js complete, url num : "+e.length+", total mod count : "+h.mod_num+", hit num: "+h.hit_num+", use time : "+n+"ms"),
+window.__moonclientlog.push("[moon] load js complete, url num : "+e.length+", total mod count : "+h.mod_num+", hit num: "+h.hit_num+", use time : "+n+"ms");
+}
+});
+});
+},
+request:function(o,n,r){
+if(o){
+n=n||0,o.indexOf("mp.weixin.qq.com")>-1&&((new Image).src=location.protocol+"//mp.weixin.qq.com/mp/jsmonitor?idkey=27613_32_1&r="+Math.random(),
+window.__moon_report([{
+offset:_,
+log:"load_script_from_mp: "+o
+}],1));
+var i=-1;
+window.__DEBUGINFO&&(__DEBUGINFO.res_list||(__DEBUGINFO.res_list=[]),__DEBUGINFO.res_list.push({
+type:"js",
+status:"pendding",
+start:+new Date,
+end:0,
+url:o
+}),i=__DEBUGINFO.res_list.length-1),-1!=location.search.indexOf("no_lshttps=1")&&(o=o.replace("http://","https://"));
+var a=document.createElement("script");
+a.src=o,a.type="text/javascript",a.async=!0,a.down_time=+new Date,a.onerror=function(s){
+t(i,"status","error"),t(i,"end",+new Date);
+var _=new Error(s);
+if(n>=0)if(w>n){
+var l=o.replace("res.wx.qq.com","mp.weixin.qq.com");
+h.request(l,n,r);
+}else h.request(o,n,r);else window.__moon_report&&window.__moon_report([{
+offset:c,
+log:"load_script_error: "+o,
+e:_
+}],1);
+if(n==w-1&&window.__moon_report([{
+offset:d,
+log:"load_script_error: "+o,
+e:_
+}],1),-1==n){
+var u="ua: "+window.navigator.userAgent+", time="+(+new Date-a.down_time)+", load_script_error -1 : "+o;
+window.__moon_report([{
+offset:m,
+log:u
+}],1);
+}
+window.__moonclientlog.push("moon load js error : "+o+", error -> "+_.toString()),
+e("moon_request_error url:"+o);
+},"undefined"!=typeof moon_crossorigin&&moon_crossorigin&&a.setAttribute("crossorigin",!0),
+a.onload=a.onreadystatechange=function(){
+t(i,"status","loaded"),t(i,"end",+new Date),!a||a.readyState&&!/loaded|complete/.test(a.readyState)||(t(i,"status","200"),
+a.onload=a.onreadystatechange=null,"function"==typeof r&&r());
+},n--,s.appendChild(a),e("moon_request url:"+o+" retry:"+n);
+}
+},
+setItem:function(e,o){
+!!a&&a.setItem(e,o);
+},
+clear:function(){
+a&&(i(a,function(e,o){
+~o.indexOf(h.prefix)&&a.removeItem(o);
+}),console.debug&&console.debug("[moon] clear"));
+},
+idkeyReport:function(e,o,t){
+t=t||1;
+var n=e+"_"+o+"_"+t;
+(new Image).src="/mp/jsmonitor?idkey="+n+"&r="+Math.random();
+}
+};
+seajs&&seajs.use&&"string"==typeof window.__moon_mainjs&&seajs.use(window.__moon_mainjs),
+window.moon=h;
+}(window),function(){
+try{
+Math.random()<1;
+}catch(e){}
+}(),window.moon.init();
+};
+e(),!!window.__moon_initcallback&&window.__moon_initcallback(),window.__wxgspeeds&&(window.__wxgspeeds.moonendtime=+new Date);
+}
+}
+__moonf__(); }, 25);</script><script nonce="1799824546" type="text/javascript">
+    var real_show_page_time = +new Date();
+    if (!!window.addEventListener){
+        window.addEventListener("load", function(){
+            window.onload_endtime = +new Date();
+        });
+    }
+
+    
+    if(typeof seajs != 'undefined' && seajs.config){
+        try{
+            seajs.config({
+              'map': [
+                [ '.js', '.js?v=' ]
+              ]
+            });
+        }catch(e){
+            console.info('not support seajs config');
+        }
+    }
+
+    
+</script>
+
+    </body>
+    <script nonce="1799824546" type="text/javascript">document.addEventListener("touchstart", function() {},false);</script>
+</html>
+
