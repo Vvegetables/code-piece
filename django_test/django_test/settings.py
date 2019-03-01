@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'users',
     'websocket_chat_test',
     'djcelery',
+    'model_inhirentance',
 ]
 
 MIDDLEWARE = [
@@ -156,6 +157,15 @@ STATIC_URL = '/static/'
 LOGIN_URL = "/app/login/"
 AUTH_USER_MODEL = 'users.User'
 
+#email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'hardwork_fight@163.com'
+EMAIL_HOST_PASSWORD = 'QWERTYUIOP123' #客户端授权码
+EMAIL_FROM = 'django<hardwork_fight@163.com>'
+EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = True
 
 # Celery
 from .celeryconfig import *

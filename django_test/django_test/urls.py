@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-import celery_task
+import celery_task.views
+from celery_task.views import sync_send_email
 
 
 urlpatterns = [
@@ -25,4 +26,6 @@ urlpatterns = [
     url(r"^template/",include("self_template_define.urls",namespace="self_template_define")),
     url(r"^app/",include("self_application.urls",namespace="self_application")),
     url(r"^do/$",celery_task.views.do),
+    url(r"^email-send/$", celery_task.views.celery_send_email),
+    url(r"^sync-email-send", sync_send_email),
 ]
