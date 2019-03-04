@@ -1,14 +1,10 @@
-import json
 import os
-import datetime
 from io import BytesIO
 
 from django.conf.urls import url
 from django.http.request import HttpRequest
 from django.http.response import HttpResponse
 from django.utils.encoding import escape_uri_path
-from openpyxl.reader.excel import load_workbook
-from openpyxl.workbook.workbook import Workbook
 
 class HBViewMeta(type):
     def __new__(cls, classname, extends_tuple, attr_dict):
