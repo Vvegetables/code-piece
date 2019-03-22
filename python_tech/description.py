@@ -23,12 +23,12 @@ class OpTypeColor:
 def top():
     def __get__():
         print("__get__")
-    print("dd")
     return __get__
 
 class T:
     tp = top
 print(T.tp)
+print(top)
 a = top()
 b = top()
 print(a)
