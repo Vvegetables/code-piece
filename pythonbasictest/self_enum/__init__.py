@@ -50,8 +50,7 @@ print([name for name, member in Color.__members__.items()])
     
 #Functional API
 Animal = Enum('Animal',"ANT BEE CAT DOG")
-print(Animal.ANT)    
-    
+print(type(Animal.ANT))
 
 #the variation of enum
 class Shape(IntEnum):
