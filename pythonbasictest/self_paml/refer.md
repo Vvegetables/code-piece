@@ -1,0 +1,2 @@
+- pyyaml: https://pyyaml.org/wiki/PyYAMLDocumentation
+- yaml: https://yaml.org/spec/1.2/spec.html
